@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Messaging;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace Lab1
 {
@@ -9,7 +11,7 @@ namespace Lab1
         private const char Delimiter = '$';
 
         private static MessageQueue _messageQueue;
-        
+        private static Field _field;
 
         private static bool _first;
         private static string _playerName;
@@ -67,8 +69,9 @@ namespace Lab1
                 SendReadyMessage();
 
                 Console.WriteLine(ReceiveMessage());
+                _field = new Field();
 
-                AttackOpponent(new Field());
+                AttackOpponent();
             }
             else
             {
@@ -80,7 +83,11 @@ namespace Lab1
                     SendReadyMessage();
                 }
 
-                ReceiveOpponentAttackMessage(new Field());
+                Thread.Sleep(500);
+
+                _field = new Field();
+
+                ReceiveOpponentAttackMessage();
             }
         }
 
@@ -88,11 +95,32 @@ namespace Lab1
 
         #region Attack Proccesing
 
-        private static void AttackOpponent(Field field)
+        private static void AttackOpponent()
         {
             Console.WriteLine(_playerName + "\'s turn to attack ");
-            Console.Write("Attack field: ");
-            SendAttackMessage(Console.ReadLine().Trim());
+
+            var validInput = false;
+            var input = "";
+
+            while (!validInput)
+            {
+                try
+                {
+                    Console.Write("Attack field: ");
+                    input = Console.ReadLine().Trim();
+                    validInput = true;
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("You have entered a non integer value");
+                }
+                catch (IndexOutOfRangeException e2)
+                {
+                    Console.WriteLine("Entered range is not valid for this field");
+                } 
+            }
+
+            SendAttackMessage(input);
 
             var message = ReceiveMessage();
             Console.WriteLine(message + Environment.NewLine);
@@ -104,15 +132,15 @@ namespace Lab1
                 return;
             }
 
-            ReceiveOpponentAttackMessage(field);
+            ReceiveOpponentAttackMessage();
         }
 
-        private static void ReceiveOpponentAttackMessage(Field field)
+        private static void ReceiveOpponentAttackMessage()
         {
             Console.WriteLine("Opponent attacks");
             var message = ReceiveMessage();
 
-            var outcome = field.DetermineAttackOutcome(message);
+            var outcome = _field.DetermineAttackOutcome(message);
 
             if (outcome == Response.Win)
             {
@@ -121,7 +149,7 @@ namespace Lab1
             else
             {
                 SendMessage(outcome);
-                AttackOpponent(field);
+                AttackOpponent();
             }
         }
 
