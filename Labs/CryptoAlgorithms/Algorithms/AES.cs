@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using CryptoAlgorithms.Helpers;
 
 namespace CryptoAlgorithms.Algorithms
@@ -32,7 +33,7 @@ namespace CryptoAlgorithms.Algorithms
                     {
                         using (var writer = new StreamWriter(cryptoStream))
                         {
-                            writer.Write(plainTextFilePath);
+                            writer.Write(GetFileText(plainTextFilePath));
                         }
                     }
 
@@ -40,10 +41,27 @@ namespace CryptoAlgorithms.Algorithms
                 }
             }
 
-            using (var writer = new StreamWriter(outputFilePath))
+            using (var writer = new BinaryWriter(new FileStream(outputFilePath, FileMode.Create)))
             {
                 writer.Write(encrypted);
             }
+        }
+
+        private static string GetFileText(string filePath)
+        {
+            var text = "";
+
+            using (var reader = new StreamReader(filePath))
+            {
+                text = reader.ReadToEnd();
+            }
+
+            return text;
+        }
+
+        private static byte[] GetByteArrayFromFile(string filePath)
+        {
+            return File.ReadAllBytes(filePath);
         }
 
         public static void Decrypt(string cipherTextFilePath, string keyFilePath, string ivFilePath,
@@ -60,7 +78,7 @@ namespace CryptoAlgorithms.Algorithms
 
                 var decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
 
-                using (var memoryStream = new MemoryStream())
+                using (var memoryStream = new MemoryStream(GetByteArrayFromFile(cipherTextFilePath)))
                 {
                     using (var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
                     {
