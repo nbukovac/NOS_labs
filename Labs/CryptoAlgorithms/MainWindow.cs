@@ -26,5 +26,25 @@ namespace CryptoAlgorithms
         {
 
         }
+
+        private void aesEncryptIVChooseBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aesEncryptPlainChoosBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aesEncryptIvGenerateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aesStartEncryptionBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

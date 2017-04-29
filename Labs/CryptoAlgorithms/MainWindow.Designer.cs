@@ -45,6 +45,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.aesEncryptKeyChooseBtn = new System.Windows.Forms.Button();
             this.aesEncryptKeyGenerateBtn = new System.Windows.Forms.Button();
+            this.aesEncryptIVChooseBtn = new System.Windows.Forms.Button();
+            this.aesEncryptIvGenerateBtn = new System.Windows.Forms.Button();
+            this.aesEncryptPlainChoosBtn = new System.Windows.Forms.Button();
+            this.aesStartEncryptionBtn = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesEncryptGroup.SuspendLayout();
@@ -61,7 +65,7 @@
             this.tabControl1.Location = new System.Drawing.Point(3, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(873, 497);
+            this.tabControl1.Size = new System.Drawing.Size(873, 490);
             this.tabControl1.TabIndex = 0;
             // 
             // aesTab
@@ -71,7 +75,7 @@
             this.aesTab.Location = new System.Drawing.Point(4, 22);
             this.aesTab.Name = "aesTab";
             this.aesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.aesTab.Size = new System.Drawing.Size(865, 471);
+            this.aesTab.Size = new System.Drawing.Size(865, 464);
             this.aesTab.TabIndex = 0;
             this.aesTab.Text = "AES";
             this.aesTab.ToolTipText = "AES algorithm";
@@ -89,6 +93,10 @@
             // 
             // aesEncryptGroup
             // 
+            this.aesEncryptGroup.Controls.Add(this.aesStartEncryptionBtn);
+            this.aesEncryptGroup.Controls.Add(this.aesEncryptPlainChoosBtn);
+            this.aesEncryptGroup.Controls.Add(this.aesEncryptIvGenerateBtn);
+            this.aesEncryptGroup.Controls.Add(this.aesEncryptIVChooseBtn);
             this.aesEncryptGroup.Controls.Add(this.aesEncryptKeyGenerateBtn);
             this.aesEncryptGroup.Controls.Add(this.aesEncryptKeyChooseBtn);
             this.aesEncryptGroup.Controls.Add(this.textBox1);
@@ -102,7 +110,7 @@
             this.aesEncryptGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.aesEncryptGroup.Location = new System.Drawing.Point(16, 20);
             this.aesEncryptGroup.Name = "aesEncryptGroup";
-            this.aesEncryptGroup.Size = new System.Drawing.Size(830, 182);
+            this.aesEncryptGroup.Size = new System.Drawing.Size(830, 200);
             this.aesEncryptGroup.TabIndex = 0;
             this.aesEncryptGroup.TabStop = false;
             this.aesEncryptGroup.Text = "Encrypt";
@@ -184,7 +192,7 @@
             // 
             // aesEncryptPlainFile
             // 
-            this.aesEncryptPlainFile.Location = new System.Drawing.Point(150, 93);
+            this.aesEncryptPlainFile.Location = new System.Drawing.Point(150, 89);
             this.aesEncryptPlainFile.Name = "aesEncryptPlainFile";
             this.aesEncryptPlainFile.Size = new System.Drawing.Size(443, 26);
             this.aesEncryptPlainFile.TabIndex = 5;
@@ -192,7 +200,7 @@
             // aesEncryptCipherFile
             // 
             this.aesEncryptCipherFile.AutoSize = true;
-            this.aesEncryptCipherFile.Location = new System.Drawing.Point(6, 135);
+            this.aesEncryptCipherFile.Location = new System.Drawing.Point(6, 124);
             this.aesEncryptCipherFile.Name = "aesEncryptCipherFile";
             this.aesEncryptCipherFile.Size = new System.Drawing.Size(109, 20);
             this.aesEncryptCipherFile.TabIndex = 6;
@@ -200,7 +208,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 134);
+            this.textBox1.Location = new System.Drawing.Point(150, 125);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(443, 26);
             this.textBox1.TabIndex = 7;
@@ -225,11 +233,51 @@
             this.aesEncryptKeyGenerateBtn.UseVisualStyleBackColor = true;
             this.aesEncryptKeyGenerateBtn.Click += new System.EventHandler(this.aesEncryptKeyGenerateBtn_Click);
             // 
+            // aesEncryptIVChooseBtn
+            // 
+            this.aesEncryptIVChooseBtn.Location = new System.Drawing.Point(609, 55);
+            this.aesEncryptIVChooseBtn.Name = "aesEncryptIVChooseBtn";
+            this.aesEncryptIVChooseBtn.Size = new System.Drawing.Size(101, 28);
+            this.aesEncryptIVChooseBtn.TabIndex = 10;
+            this.aesEncryptIVChooseBtn.Text = "Choose file";
+            this.aesEncryptIVChooseBtn.UseVisualStyleBackColor = true;
+            this.aesEncryptIVChooseBtn.Click += new System.EventHandler(this.aesEncryptIVChooseBtn_Click);
+            // 
+            // aesEncryptIvGenerateBtn
+            // 
+            this.aesEncryptIvGenerateBtn.Location = new System.Drawing.Point(717, 55);
+            this.aesEncryptIvGenerateBtn.Name = "aesEncryptIvGenerateBtn";
+            this.aesEncryptIvGenerateBtn.Size = new System.Drawing.Size(107, 28);
+            this.aesEncryptIvGenerateBtn.TabIndex = 11;
+            this.aesEncryptIvGenerateBtn.Text = "Generate";
+            this.aesEncryptIvGenerateBtn.UseVisualStyleBackColor = true;
+            this.aesEncryptIvGenerateBtn.Click += new System.EventHandler(this.aesEncryptIvGenerateBtn_Click);
+            // 
+            // aesEncryptPlainChoosBtn
+            // 
+            this.aesEncryptPlainChoosBtn.Location = new System.Drawing.Point(609, 90);
+            this.aesEncryptPlainChoosBtn.Name = "aesEncryptPlainChoosBtn";
+            this.aesEncryptPlainChoosBtn.Size = new System.Drawing.Size(101, 25);
+            this.aesEncryptPlainChoosBtn.TabIndex = 12;
+            this.aesEncryptPlainChoosBtn.Text = "Choose file";
+            this.aesEncryptPlainChoosBtn.UseVisualStyleBackColor = true;
+            this.aesEncryptPlainChoosBtn.Click += new System.EventHandler(this.aesEncryptPlainChoosBtn_Click);
+            // 
+            // aesStartEncryptionBtn
+            // 
+            this.aesStartEncryptionBtn.Location = new System.Drawing.Point(355, 157);
+            this.aesStartEncryptionBtn.Name = "aesStartEncryptionBtn";
+            this.aesStartEncryptionBtn.Size = new System.Drawing.Size(95, 37);
+            this.aesStartEncryptionBtn.TabIndex = 13;
+            this.aesStartEncryptionBtn.Text = "Encrypt";
+            this.aesStartEncryptionBtn.UseVisualStyleBackColor = true;
+            this.aesStartEncryptionBtn.Click += new System.EventHandler(this.aesStartEncryptionBtn_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 505);
+            this.ClientSize = new System.Drawing.Size(888, 498);
             this.Controls.Add(this.tabControl1);
             this.Name = "MainWindow";
             this.Text = "Crypto Algorithms";
@@ -262,6 +310,10 @@
         private System.Windows.Forms.Button aesEncryptKeyChooseBtn;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button aesEncryptKeyGenerateBtn;
+        private System.Windows.Forms.Button aesEncryptIVChooseBtn;
+        private System.Windows.Forms.Button aesEncryptPlainChoosBtn;
+        private System.Windows.Forms.Button aesEncryptIvGenerateBtn;
+        private System.Windows.Forms.Button aesStartEncryptionBtn;
     }
 }
 
