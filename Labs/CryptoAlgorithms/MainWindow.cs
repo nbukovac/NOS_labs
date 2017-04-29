@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace CryptoAlgorithms
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void aesEncryptKeyChooseBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aesEncryptKeyGenerateBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
