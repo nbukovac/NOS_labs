@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using CryptoAlgorithms.Helpers;
 
 namespace CryptoAlgorithms.Algorithms
 {
     public class AES
     {
-
-        public static void Encrypt(string plainTextFilePath, string keyFilePath, string ivFilePath, 
+        public static void Encrypt(string plainTextFilePath, string keyFilePath, string ivFilePath,
             string outputFilePath)
         {
             var key = GetKeyFromFile(keyFilePath);

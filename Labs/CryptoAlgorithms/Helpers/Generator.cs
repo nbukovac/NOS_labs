@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CryptoAlgorithms.Helpers
 {
     public class Generator
     {
-
         private const int AesKeyBytes = 32;
         private const int AesIVBytes = 16;
 
@@ -17,13 +11,10 @@ namespace CryptoAlgorithms.Helpers
         {
             var bytes = new byte[AesKeyBytes];
             var random = new Random();
-            
+
             random.NextBytes(bytes);
 
-            using (var writer = new StreamWriter(keyFilePath))
-            {
-                writer.Write(Converter.ByteArrayToString(bytes));
-            }
+            FileOperations.WriteToTextFile(keyFilePath, Converter.ByteArrayToString(bytes));
         }
 
 
@@ -34,11 +25,7 @@ namespace CryptoAlgorithms.Helpers
 
             random.NextBytes(bytes);
 
-            using (var writer = new StreamWriter(ivFilePath))
-            {
-                writer.Write(Converter.ByteArrayToString(bytes));
-            }
+            FileOperations.WriteToTextFile(ivFilePath, Converter.ByteArrayToString(bytes));
         }
-
     }
 }

@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.IO;
 
 namespace CryptoAlgorithms.Helpers
 {
     public class FileOperations
     {
-
         public static string ReadFromTextFile(string filePath)
         {
             string text;
@@ -20,6 +14,14 @@ namespace CryptoAlgorithms.Helpers
             }
 
             return text;
+        }
+
+        public static void WriteToTextFile(string filePath, string text)
+        {
+            using (var writer = new StreamWriter(filePath))
+            {
+                writer.Write(text);
+            }
         }
 
         public static byte[] ReadFromBinaryFile(string filePath)
@@ -34,6 +36,5 @@ namespace CryptoAlgorithms.Helpers
                 writer.Write(bytes);
             }
         }
-
     }
 }
