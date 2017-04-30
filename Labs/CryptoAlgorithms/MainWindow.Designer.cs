@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControl = new System.Windows.Forms.TabControl();
             this.aesTab = new System.Windows.Forms.TabPage();
             this.aesDecryptGroup = new System.Windows.Forms.GroupBox();
             this.aesDecryptCipherBtn = new System.Windows.Forms.Button();
@@ -58,25 +58,32 @@
             this.label3 = new System.Windows.Forms.Label();
             this.aesIVLabel = new System.Windows.Forms.Label();
             this.aesKeyLabel = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
+            this.sha1Tab = new System.Windows.Forms.TabPage();
+            this.sha1CalculateHashBtn = new System.Windows.Forms.Button();
+            this.sha1PlainChooseBtn = new System.Windows.Forms.Button();
+            this.sha1HashFile = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.sha1PlainFile = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tabControl.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesDecryptGroup.SuspendLayout();
             this.aesEncryptGroup.SuspendLayout();
+            this.sha1Tab.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tabControl
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.aesTab);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(873, 490);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl.Controls.Add(this.aesTab);
+            this.tabControl.Controls.Add(this.sha1Tab);
+            this.tabControl.Location = new System.Drawing.Point(3, 12);
+            this.tabControl.Name = "tabControl";
+            this.tabControl.SelectedIndex = 0;
+            this.tabControl.Size = new System.Drawing.Size(873, 490);
+            this.tabControl.TabIndex = 0;
             // 
             // aesTab
             // 
@@ -379,39 +386,99 @@
             this.aesKeyLabel.TabIndex = 0;
             this.aesKeyLabel.Text = "File containing key";
             // 
-            // tabPage2
+            // sha1Tab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(865, 464);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.sha1Tab.Controls.Add(this.sha1CalculateHashBtn);
+            this.sha1Tab.Controls.Add(this.sha1PlainChooseBtn);
+            this.sha1Tab.Controls.Add(this.sha1HashFile);
+            this.sha1Tab.Controls.Add(this.label7);
+            this.sha1Tab.Controls.Add(this.sha1PlainFile);
+            this.sha1Tab.Controls.Add(this.label6);
+            this.sha1Tab.Location = new System.Drawing.Point(4, 22);
+            this.sha1Tab.Name = "sha1Tab";
+            this.sha1Tab.Padding = new System.Windows.Forms.Padding(3);
+            this.sha1Tab.Size = new System.Drawing.Size(865, 464);
+            this.sha1Tab.TabIndex = 1;
+            this.sha1Tab.Text = "SHA-1";
+            this.sha1Tab.UseVisualStyleBackColor = true;
+            // 
+            // sha1CalculateHashBtn
+            // 
+            this.sha1CalculateHashBtn.Location = new System.Drawing.Point(278, 121);
+            this.sha1CalculateHashBtn.Name = "sha1CalculateHashBtn";
+            this.sha1CalculateHashBtn.Size = new System.Drawing.Size(142, 30);
+            this.sha1CalculateHashBtn.TabIndex = 5;
+            this.sha1CalculateHashBtn.Text = "Calculate hash";
+            this.sha1CalculateHashBtn.UseVisualStyleBackColor = true;
+            this.sha1CalculateHashBtn.Click += new System.EventHandler(this.sha1CalculateHashBtn_Click);
+            // 
+            // sha1PlainChooseBtn
+            // 
+            this.sha1PlainChooseBtn.Location = new System.Drawing.Point(625, 23);
+            this.sha1PlainChooseBtn.Name = "sha1PlainChooseBtn";
+            this.sha1PlainChooseBtn.Size = new System.Drawing.Size(123, 23);
+            this.sha1PlainChooseBtn.TabIndex = 4;
+            this.sha1PlainChooseBtn.Text = "Choose file";
+            this.sha1PlainChooseBtn.UseVisualStyleBackColor = true;
+            this.sha1PlainChooseBtn.Click += new System.EventHandler(this.sha1PlainChooseBtn_Click);
+            // 
+            // sha1HashFile
+            // 
+            this.sha1HashFile.Location = new System.Drawing.Point(103, 64);
+            this.sha1HashFile.Name = "sha1HashFile";
+            this.sha1HashFile.Size = new System.Drawing.Size(493, 20);
+            this.sha1HashFile.TabIndex = 3;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Hash output file";
+            // 
+            // sha1PlainFile
+            // 
+            this.sha1PlainFile.Location = new System.Drawing.Point(103, 23);
+            this.sha1PlainFile.Name = "sha1PlainFile";
+            this.sha1PlainFile.Size = new System.Drawing.Size(493, 20);
+            this.sha1PlainFile.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(17, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(66, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Plain text file";
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(888, 498);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControl);
             this.Name = "MainWindow";
             this.Text = "Crypto Algorithms";
-            this.tabControl1.ResumeLayout(false);
+            this.tabControl.ResumeLayout(false);
             this.aesTab.ResumeLayout(false);
             this.aesDecryptGroup.ResumeLayout(false);
             this.aesDecryptGroup.PerformLayout();
             this.aesEncryptGroup.ResumeLayout(false);
             this.aesEncryptGroup.PerformLayout();
+            this.sha1Tab.ResumeLayout(false);
+            this.sha1Tab.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage aesTab;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage sha1Tab;
         private System.Windows.Forms.GroupBox aesDecryptGroup;
         private System.Windows.Forms.GroupBox aesEncryptGroup;
         private System.Windows.Forms.Label label2;
@@ -440,6 +507,12 @@
         private System.Windows.Forms.Button aesDecryptCipherBtn;
         private System.Windows.Forms.Button aesDecryptChooseIvBtn;
         private System.Windows.Forms.Button aesDecryptChooseKeyBtn;
+        private System.Windows.Forms.Button sha1PlainChooseBtn;
+        private System.Windows.Forms.TextBox sha1HashFile;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox sha1PlainFile;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button sha1CalculateHashBtn;
     }
 }
 

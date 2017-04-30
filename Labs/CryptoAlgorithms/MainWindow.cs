@@ -118,23 +118,42 @@ namespace CryptoAlgorithms
                 MessageBox.Show("Choose a file for decryption", "Choose plain text", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
-            else if (string.IsNullOrWhiteSpace(aesDecryptKeyFile.Text))
+            if (string.IsNullOrWhiteSpace(aesDecryptKeyFile.Text))
             {
                 MessageBox.Show("Choose a file with AES key", "Choose key file", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
-            else if (string.IsNullOrWhiteSpace(aesDecryptIvFile.Text))
+            if (string.IsNullOrWhiteSpace(aesDecryptIvFile.Text))
             {
                 MessageBox.Show("Choose a file with AES initialization vector", "Choose IV file", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
             }
-            else if (string.IsNullOrWhiteSpace(aesDecryptPlainFile.Text))
+            if (string.IsNullOrWhiteSpace(aesDecryptPlainFile.Text))
             {
                 aesDecryptPlainFile.Text = _initialDirectory + "AES_decrypted.txt";
             }
 
             AES.Decrypt(aesDecryptCipherFile.Text, aesDecryptKeyFile.Text, aesDecryptIvFile.Text,
                 aesDecryptPlainFile.Text);
+        }
+
+        #endregion
+
+        #region SHA-1
+
+        private void sha1PlainChooseBtn_Click(object sender, EventArgs e)
+        {
+            sha1PlainFile.Text = GetFileName();
+        }
+
+        private void sha1CalculateHashBtn_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(sha1HashFile.Text))
+            {
+                sha1HashFile.Text = _initialDirectory + "SHA_hash.txt";
+            }
+
+            SHA1.CalculateHash(sha1PlainFile.Text, sha1HashFile.Text);
         }
 
         #endregion
