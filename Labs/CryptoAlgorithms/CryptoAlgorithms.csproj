@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\AES.cs" />
+    <Compile Include="Helpers\FileOperations.cs" />
     <Compile Include="Helpers\Generator.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>

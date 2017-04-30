@@ -31,37 +31,15 @@ namespace CryptoAlgorithms.Algorithms
                 {
                     using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
                     {
-                        using (var writer = new StreamWriter(cryptoStream))
-                        {
-                            writer.Write(GetFileText(plainTextFilePath));
-                        }
+                        var bytes = FileOperations.ReadFromBinaryFile(plainTextFilePath);
+                        cryptoStream.Write(bytes, 0, bytes.Length);
                     }
 
                     encrypted = memoryStream.ToArray();
                 }
             }
 
-            using (var writer = new BinaryWriter(new FileStream(outputFilePath, FileMode.Create)))
-            {
-                writer.Write(encrypted);
-            }
-        }
-
-        private static string GetFileText(string filePath)
-        {
-            var text = "";
-
-            using (var reader = new StreamReader(filePath))
-            {
-                text = reader.ReadToEnd();
-            }
-
-            return text;
-        }
-
-        private static byte[] GetByteArrayFromFile(string filePath)
-        {
-            return File.ReadAllBytes(filePath);
+            FileOperations.WriteToBinaryFile(outputFilePath, encrypted);
         }
 
         public static void Decrypt(string cipherTextFilePath, string keyFilePath, string ivFilePath,
@@ -69,7 +47,7 @@ namespace CryptoAlgorithms.Algorithms
         {
             var key = GetKeyFromFile(keyFilePath);
             var iv = GetIVFromFile(ivFilePath);
-            string plainText;
+            byte[] decrypted;
 
             using (var aes = Aes.Create())
             {
@@ -77,43 +55,29 @@ namespace CryptoAlgorithms.Algorithms
                 aes.Key = Converter.HexStringToBytes(key);
 
                 var decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
+                var encrypted = FileOperations.ReadFromBinaryFile(cipherTextFilePath);
+                decrypted = new byte[encrypted.Length];
 
-                using (var memoryStream = new MemoryStream(GetByteArrayFromFile(cipherTextFilePath)))
+                using (var memoryStream = new MemoryStream(encrypted))
                 {
                     using (var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
                     {
-                        using (var reader = new StreamReader(cryptoStream))
-                        {
-                            plainText = reader.ReadToEnd();
-                        }
+                        cryptoStream.Read(decrypted, 0, encrypted.Length);
                     }
                 }
             }
 
-            using (var writer = new StreamWriter(outputFilePath))
-            {
-                writer.Write(plainText);
-            }
+            FileOperations.WriteToBinaryFile(outputFilePath, decrypted);
         }
 
         private static string GetIVFromFile(string ivFilePath)
         {
-            string iv;
-            using (var reader = new StreamReader(ivFilePath))
-            {
-                iv = reader.ReadLine().Trim();
-            }
-            return iv;
+            return FileOperations.ReadFromTextFile(ivFilePath);
         }
 
         private static string GetKeyFromFile(string keyFilePath)
         {
-            string key;
-            using (var reader = new StreamReader(keyFilePath))
-            {
-                key = reader.ReadLine().Trim();
-            }
-            return key;
+            return FileOperations.ReadFromTextFile(keyFilePath);
         }
     }
 }
