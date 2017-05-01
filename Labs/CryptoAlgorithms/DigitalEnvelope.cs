@@ -72,7 +72,7 @@ namespace CryptoAlgorithms
                 rsaPlain[i] = aesKey[i];
             }
 
-            for (int i = aesKey.Length; i < aesIv.Length; i++)
+            for (int i = aesKey.Length; i < aesIv.Length + aesKey.Length; i++)
             {
                 rsaPlain[i] = aesIv[i - aesKey.Length];
             }

@@ -920,7 +920,7 @@
             // 
             // envelopeDecryptEnvelopeBtn
             // 
-            this.envelopeDecryptEnvelopeBtn.Location = new System.Drawing.Point(714, 19);
+            this.envelopeDecryptEnvelopeBtn.Location = new System.Drawing.Point(714, 27);
             this.envelopeDecryptEnvelopeBtn.Name = "envelopeDecryptEnvelopeBtn";
             this.envelopeDecryptEnvelopeBtn.Size = new System.Drawing.Size(75, 23);
             this.envelopeDecryptEnvelopeBtn.TabIndex = 6;

@@ -320,7 +320,7 @@ namespace CryptoAlgorithms
             }
             if (string.IsNullOrWhiteSpace(envelopeDecryptPlain.Text))
             {
-                envelopeDecryptEnvelope.Text = _initialDirectory + "envelope_decrypted.txt";
+                envelopeDecryptPlain.Text = _initialDirectory + "envelope_decrypted.txt";
             }
 
             if (ready)
