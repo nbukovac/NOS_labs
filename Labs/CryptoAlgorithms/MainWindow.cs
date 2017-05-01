@@ -74,10 +74,13 @@ namespace CryptoAlgorithms
 
         private void aesStartEncryptionBtn_Click(object sender, EventArgs e)
         {
+            var ready = true;
+
             if (string.IsNullOrWhiteSpace(aesEncryptPlainFile.Text))
             {
-                MessageBox.Show("Choose a file for encryption", "Choose plain text", MessageBoxButtons.OK, 
+                MessageBox.Show("Choose a file for encryption", "Choose plain text", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+                ready = false;
             }
             if (string.IsNullOrWhiteSpace(aesEncryptKeyFile.Text))
             {
@@ -92,8 +95,11 @@ namespace CryptoAlgorithms
                 aesEncryptCipherFile.Text = _initialDirectory + "AES_cipher.bin";
             }
 
-            AES.Encrypt(aesEncryptPlainFile.Text, aesEncryptKeyFile.Text, aesEncryptIVFile.Text, 
-                aesEncryptCipherFile.Text);
+            if (ready)
+            {
+                AES.Encrypt(aesEncryptPlainFile.Text, aesEncryptKeyFile.Text, aesEncryptIVFile.Text,
+                        aesEncryptCipherFile.Text); 
+            }
         }
 
         private void aesDecryptChooseKeyBtn_Click(object sender, EventArgs e)
@@ -113,28 +119,36 @@ namespace CryptoAlgorithms
 
         private void aesDecryptStartBtn_Click(object sender, EventArgs e)
         {
+            var ready = true;
+
             if (string.IsNullOrWhiteSpace(aesDecryptCipherFile.Text))
             {
                 MessageBox.Show("Choose a file for decryption", "Choose plain text", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+                ready = false;
             }
             if (string.IsNullOrWhiteSpace(aesDecryptKeyFile.Text))
             {
                 MessageBox.Show("Choose a file with AES key", "Choose key file", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+                ready = false;
             }
             if (string.IsNullOrWhiteSpace(aesDecryptIvFile.Text))
             {
                 MessageBox.Show("Choose a file with AES initialization vector", "Choose IV file", MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
+                ready = false;
             }
             if (string.IsNullOrWhiteSpace(aesDecryptPlainFile.Text))
             {
                 aesDecryptPlainFile.Text = _initialDirectory + "AES_decrypted.txt";
             }
 
-            AES.Decrypt(aesDecryptCipherFile.Text, aesDecryptKeyFile.Text, aesDecryptIvFile.Text,
-                aesDecryptPlainFile.Text);
+            if (ready)
+            {
+                AES.Decrypt(aesDecryptCipherFile.Text, aesDecryptKeyFile.Text, aesDecryptIvFile.Text,
+                        aesDecryptPlainFile.Text); 
+            }
         }
 
         #endregion
@@ -158,5 +172,61 @@ namespace CryptoAlgorithms
 
         #endregion
 
+        #region RSA
+
+        private void rsaGenerateKeysBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var keysSize = int.Parse(rsaKeysSize.Text);
+                RSA.GenerateKeys(keysSize, _initialDirectory + "RSA_private.txt", _initialDirectory + "RSA_public.txt");
+            }
+            catch (FormatException exception)
+            {
+                MessageBox.Show(exception.Message, "Parsing error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Key creation error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void rsaEncryptPlainBtn_Click(object sender, EventArgs e)
+        {
+            rsaEncryptPlainFile.Text = GetFileName();
+        }
+
+        private void rsaEncryptPublicBtn_Click(object sender, EventArgs e)
+        {
+            rsaEncryptPublicKey.Text = GetFileName();
+        }
+
+        private void rsaStartEncrypt_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(rsaEncryptPlainFile.Text))
+            {
+                MessageBox.Show("Choose a file for encryption", "Choose plain text", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(rsaEncryptPublicKey.Text))
+            {
+                rsaEncryptPublicKey.Text = _initialDirectory + "RSA_public.txt";
+            }
+            if (string.IsNullOrWhiteSpace(rsaEncryptCipherFile.Text))
+            {
+                rsaEncryptCipherFile.Text = _initialDirectory + "RSA_cipher.bin";
+            }
+
+            if (ready)
+            {
+                RSA.Encrypt(rsaEncryptPlainFile.Text, int.Parse(rsaKeysSize.Text), rsaEncryptPublicKey.Text,
+                        rsaEncryptCipherFile.Text); 
+            }
+        }
+
+        #endregion
     }
 }
