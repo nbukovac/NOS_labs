@@ -263,8 +263,84 @@ namespace CryptoAlgorithms
             rsaDecryptCipherFile.Text = GetFileName();
         }
 
+
         #endregion
 
-       
+        #region Envelope
+
+        private void envelopeEncryptStart_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(envelopeEncryptPlain.Text))
+            {
+                MessageBox.Show("Choose a file for encryption", "Choose plain text", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(envelopeEncryptPublic.Text))
+            {
+                envelopeEncryptPlain.Text = _initialDirectory + "RSA_public.txt";
+            }
+            if (string.IsNullOrWhiteSpace(rsaEncryptCipherFile.Text))
+            {
+                envelopeEncryptEnvelope.Text = _initialDirectory + "envelope.txt";
+            }
+
+            if (ready)
+            {
+                DigitalEnvelope.CreateEnvelope(envelopeEncryptPlain.Text, int.Parse(rsaKeysSize.Text), 
+                    envelopeEncryptPublic.Text, envelopeEncryptEnvelope.Text);
+            }
+        }
+
+        private void envelopeEncryptPublicBtn_Click(object sender, EventArgs e)
+        {
+            envelopeEncryptPublic.Text = GetFileName();
+        }
+
+        private void envelopeEncryptPlainBtn_Click(object sender, EventArgs e)
+        {
+            envelopeEncryptPlain.Text = GetFileName();
+        }
+
+        private void envelopeDecryptStartBtn_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(envelopeDecryptEnvelope.Text))
+            {
+                MessageBox.Show("Choose a file for decryption", "Choose envelope", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(envelopeDecryptPrivate.Text))
+            {
+                envelopeDecryptPrivate.Text = _initialDirectory + "RSA_private.txt";
+            }
+            if (string.IsNullOrWhiteSpace(envelopeDecryptPlain.Text))
+            {
+                envelopeDecryptEnvelope.Text = _initialDirectory + "envelope_decrypted.txt";
+            }
+
+            if (ready)
+            {
+                DigitalEnvelope.ReadEnvelope(envelopeDecryptEnvelope.Text, int.Parse(rsaKeysSize.Text),
+                    envelopeDecryptPrivate.Text, envelopeDecryptPlain.Text);
+            }
+        }
+
+        private void envelopeDecryptprivateBtn_Click(object sender, EventArgs e)
+        {
+            envelopeDecryptPrivate.Text = GetFileName();
+        }
+
+        private void envelopeDecryptEnvelopeBtn_Click(object sender, EventArgs e)
+        {
+            envelopeDecryptEnvelope.Text = GetFileName();
+        }
+
+        #endregion
+
     }
 }

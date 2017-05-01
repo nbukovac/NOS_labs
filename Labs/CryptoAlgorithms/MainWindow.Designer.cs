@@ -89,6 +89,27 @@
             this.rsaDecryptCipherBtn = new System.Windows.Forms.Button();
             this.rsaDecryptPrivateBtn = new System.Windows.Forms.Button();
             this.rsaStartDecrypt = new System.Windows.Forms.Button();
+            this.envelopeTab = new System.Windows.Forms.TabPage();
+            this.envelopeEncryptBox = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.envelopeEncryptPlain = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.envelopeEncryptPublic = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.envelopeEncryptEnvelope = new System.Windows.Forms.TextBox();
+            this.envelopeEncryptPlainBtn = new System.Windows.Forms.Button();
+            this.envelopeEncryptPublicBtn = new System.Windows.Forms.Button();
+            this.envelopeEncryptStart = new System.Windows.Forms.Button();
+            this.envelopeDecryptBox = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.envelopeDecryptEnvelope = new System.Windows.Forms.TextBox();
+            this.envelopeDecryptPrivate = new System.Windows.Forms.TextBox();
+            this.envelopeDecryptPlain = new System.Windows.Forms.TextBox();
+            this.envelopeDecryptEnvelopeBtn = new System.Windows.Forms.Button();
+            this.envelopeDecryptprivateBtn = new System.Windows.Forms.Button();
+            this.envelopeDecryptStartBtn = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesDecryptGroup.SuspendLayout();
@@ -97,6 +118,9 @@
             this.rsaTab.SuspendLayout();
             this.rsaEncryptBox.SuspendLayout();
             this.rsaDecryptBox.SuspendLayout();
+            this.envelopeTab.SuspendLayout();
+            this.envelopeEncryptBox.SuspendLayout();
+            this.envelopeDecryptBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -107,6 +131,7 @@
             this.tabControl.Controls.Add(this.aesTab);
             this.tabControl.Controls.Add(this.sha1Tab);
             this.tabControl.Controls.Add(this.rsaTab);
+            this.tabControl.Controls.Add(this.envelopeTab);
             this.tabControl.Location = new System.Drawing.Point(3, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -719,6 +744,210 @@
             this.rsaStartDecrypt.UseVisualStyleBackColor = true;
             this.rsaStartDecrypt.Click += new System.EventHandler(this.rsaStartDecrypt_Click);
             // 
+            // envelopeTab
+            // 
+            this.envelopeTab.Controls.Add(this.envelopeDecryptBox);
+            this.envelopeTab.Controls.Add(this.envelopeEncryptBox);
+            this.envelopeTab.Location = new System.Drawing.Point(4, 22);
+            this.envelopeTab.Name = "envelopeTab";
+            this.envelopeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.envelopeTab.Size = new System.Drawing.Size(865, 464);
+            this.envelopeTab.TabIndex = 3;
+            this.envelopeTab.Text = "Envelope";
+            this.envelopeTab.UseVisualStyleBackColor = true;
+            // 
+            // envelopeEncryptBox
+            // 
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptStart);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPublicBtn);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPlainBtn);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptEnvelope);
+            this.envelopeEncryptBox.Controls.Add(this.label17);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPublic);
+            this.envelopeEncryptBox.Controls.Add(this.label16);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPlain);
+            this.envelopeEncryptBox.Controls.Add(this.label15);
+            this.envelopeEncryptBox.Location = new System.Drawing.Point(15, 19);
+            this.envelopeEncryptBox.Name = "envelopeEncryptBox";
+            this.envelopeEncryptBox.Size = new System.Drawing.Size(831, 148);
+            this.envelopeEncryptBox.TabIndex = 0;
+            this.envelopeEncryptBox.TabStop = false;
+            this.envelopeEncryptBox.Text = "Encrypt";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Plain text file";
+            // 
+            // envelopeEncryptPlain
+            // 
+            this.envelopeEncryptPlain.Location = new System.Drawing.Point(107, 29);
+            this.envelopeEncryptPlain.Name = "envelopeEncryptPlain";
+            this.envelopeEncryptPlain.Size = new System.Drawing.Size(582, 20);
+            this.envelopeEncryptPlain.TabIndex = 1;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 13);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Public key file";
+            // 
+            // envelopeEncryptPublic
+            // 
+            this.envelopeEncryptPublic.Location = new System.Drawing.Point(107, 57);
+            this.envelopeEncryptPublic.Name = "envelopeEncryptPublic";
+            this.envelopeEncryptPublic.Size = new System.Drawing.Size(582, 20);
+            this.envelopeEncryptPublic.TabIndex = 3;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(9, 84);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(68, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Envelope file";
+            // 
+            // envelopeEncryptEnvelope
+            // 
+            this.envelopeEncryptEnvelope.Location = new System.Drawing.Point(107, 84);
+            this.envelopeEncryptEnvelope.Name = "envelopeEncryptEnvelope";
+            this.envelopeEncryptEnvelope.Size = new System.Drawing.Size(582, 20);
+            this.envelopeEncryptEnvelope.TabIndex = 5;
+            // 
+            // envelopeEncryptPlainBtn
+            // 
+            this.envelopeEncryptPlainBtn.Location = new System.Drawing.Point(714, 29);
+            this.envelopeEncryptPlainBtn.Name = "envelopeEncryptPlainBtn";
+            this.envelopeEncryptPlainBtn.Size = new System.Drawing.Size(75, 23);
+            this.envelopeEncryptPlainBtn.TabIndex = 6;
+            this.envelopeEncryptPlainBtn.Text = "Choose file";
+            this.envelopeEncryptPlainBtn.UseVisualStyleBackColor = true;
+            this.envelopeEncryptPlainBtn.Click += new System.EventHandler(this.envelopeEncryptPlainBtn_Click);
+            // 
+            // envelopeEncryptPublicBtn
+            // 
+            this.envelopeEncryptPublicBtn.Location = new System.Drawing.Point(714, 57);
+            this.envelopeEncryptPublicBtn.Name = "envelopeEncryptPublicBtn";
+            this.envelopeEncryptPublicBtn.Size = new System.Drawing.Size(75, 23);
+            this.envelopeEncryptPublicBtn.TabIndex = 7;
+            this.envelopeEncryptPublicBtn.Text = "Choose file";
+            this.envelopeEncryptPublicBtn.UseVisualStyleBackColor = true;
+            this.envelopeEncryptPublicBtn.Click += new System.EventHandler(this.envelopeEncryptPublicBtn_Click);
+            // 
+            // envelopeEncryptStart
+            // 
+            this.envelopeEncryptStart.Location = new System.Drawing.Point(402, 110);
+            this.envelopeEncryptStart.Name = "envelopeEncryptStart";
+            this.envelopeEncryptStart.Size = new System.Drawing.Size(106, 23);
+            this.envelopeEncryptStart.TabIndex = 8;
+            this.envelopeEncryptStart.Text = "Create envelope";
+            this.envelopeEncryptStart.UseVisualStyleBackColor = true;
+            this.envelopeEncryptStart.Click += new System.EventHandler(this.envelopeEncryptStart_Click);
+            // 
+            // envelopeDecryptBox
+            // 
+            this.envelopeDecryptBox.Controls.Add(this.envelopeDecryptStartBtn);
+            this.envelopeDecryptBox.Controls.Add(this.envelopeDecryptprivateBtn);
+            this.envelopeDecryptBox.Controls.Add(this.envelopeDecryptEnvelopeBtn);
+            this.envelopeDecryptBox.Controls.Add(this.envelopeDecryptPlain);
+            this.envelopeDecryptBox.Controls.Add(this.envelopeDecryptPrivate);
+            this.envelopeDecryptBox.Controls.Add(this.envelopeDecryptEnvelope);
+            this.envelopeDecryptBox.Controls.Add(this.label20);
+            this.envelopeDecryptBox.Controls.Add(this.label19);
+            this.envelopeDecryptBox.Controls.Add(this.label18);
+            this.envelopeDecryptBox.Location = new System.Drawing.Point(15, 199);
+            this.envelopeDecryptBox.Name = "envelopeDecryptBox";
+            this.envelopeDecryptBox.Size = new System.Drawing.Size(831, 170);
+            this.envelopeDecryptBox.TabIndex = 1;
+            this.envelopeDecryptBox.TabStop = false;
+            this.envelopeDecryptBox.Text = "Decrypt";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(9, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Envelope file";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(9, 62);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 13);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Private key file";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 95);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(66, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Plain text file";
+            // 
+            // envelopeDecryptEnvelope
+            // 
+            this.envelopeDecryptEnvelope.Location = new System.Drawing.Point(107, 30);
+            this.envelopeDecryptEnvelope.Name = "envelopeDecryptEnvelope";
+            this.envelopeDecryptEnvelope.Size = new System.Drawing.Size(582, 20);
+            this.envelopeDecryptEnvelope.TabIndex = 3;
+            // 
+            // envelopeDecryptPrivate
+            // 
+            this.envelopeDecryptPrivate.Location = new System.Drawing.Point(107, 62);
+            this.envelopeDecryptPrivate.Name = "envelopeDecryptPrivate";
+            this.envelopeDecryptPrivate.Size = new System.Drawing.Size(582, 20);
+            this.envelopeDecryptPrivate.TabIndex = 4;
+            // 
+            // envelopeDecryptPlain
+            // 
+            this.envelopeDecryptPlain.Location = new System.Drawing.Point(107, 95);
+            this.envelopeDecryptPlain.Name = "envelopeDecryptPlain";
+            this.envelopeDecryptPlain.Size = new System.Drawing.Size(582, 20);
+            this.envelopeDecryptPlain.TabIndex = 5;
+            // 
+            // envelopeDecryptEnvelopeBtn
+            // 
+            this.envelopeDecryptEnvelopeBtn.Location = new System.Drawing.Point(714, 19);
+            this.envelopeDecryptEnvelopeBtn.Name = "envelopeDecryptEnvelopeBtn";
+            this.envelopeDecryptEnvelopeBtn.Size = new System.Drawing.Size(75, 23);
+            this.envelopeDecryptEnvelopeBtn.TabIndex = 6;
+            this.envelopeDecryptEnvelopeBtn.Text = "Choose file";
+            this.envelopeDecryptEnvelopeBtn.UseVisualStyleBackColor = true;
+            this.envelopeDecryptEnvelopeBtn.Click += new System.EventHandler(this.envelopeDecryptEnvelopeBtn_Click);
+            // 
+            // envelopeDecryptprivateBtn
+            // 
+            this.envelopeDecryptprivateBtn.Location = new System.Drawing.Point(714, 59);
+            this.envelopeDecryptprivateBtn.Name = "envelopeDecryptprivateBtn";
+            this.envelopeDecryptprivateBtn.Size = new System.Drawing.Size(75, 23);
+            this.envelopeDecryptprivateBtn.TabIndex = 7;
+            this.envelopeDecryptprivateBtn.Text = "Choose file";
+            this.envelopeDecryptprivateBtn.UseVisualStyleBackColor = true;
+            this.envelopeDecryptprivateBtn.Click += new System.EventHandler(this.envelopeDecryptprivateBtn_Click);
+            // 
+            // envelopeDecryptStartBtn
+            // 
+            this.envelopeDecryptStartBtn.Location = new System.Drawing.Point(392, 130);
+            this.envelopeDecryptStartBtn.Name = "envelopeDecryptStartBtn";
+            this.envelopeDecryptStartBtn.Size = new System.Drawing.Size(116, 23);
+            this.envelopeDecryptStartBtn.TabIndex = 8;
+            this.envelopeDecryptStartBtn.Text = "Read envelope";
+            this.envelopeDecryptStartBtn.UseVisualStyleBackColor = true;
+            this.envelopeDecryptStartBtn.Click += new System.EventHandler(this.envelopeDecryptStartBtn_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -741,6 +970,11 @@
             this.rsaEncryptBox.PerformLayout();
             this.rsaDecryptBox.ResumeLayout(false);
             this.rsaDecryptBox.PerformLayout();
+            this.envelopeTab.ResumeLayout(false);
+            this.envelopeEncryptBox.ResumeLayout(false);
+            this.envelopeEncryptBox.PerformLayout();
+            this.envelopeDecryptBox.ResumeLayout(false);
+            this.envelopeDecryptBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -808,6 +1042,27 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TabPage envelopeTab;
+        private System.Windows.Forms.GroupBox envelopeEncryptBox;
+        private System.Windows.Forms.TextBox envelopeEncryptEnvelope;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox envelopeEncryptPublic;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox envelopeEncryptPlain;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button envelopeEncryptStart;
+        private System.Windows.Forms.Button envelopeEncryptPublicBtn;
+        private System.Windows.Forms.Button envelopeEncryptPlainBtn;
+        private System.Windows.Forms.GroupBox envelopeDecryptBox;
+        private System.Windows.Forms.Button envelopeDecryptStartBtn;
+        private System.Windows.Forms.Button envelopeDecryptprivateBtn;
+        private System.Windows.Forms.Button envelopeDecryptEnvelopeBtn;
+        private System.Windows.Forms.TextBox envelopeDecryptPlain;
+        private System.Windows.Forms.TextBox envelopeDecryptPrivate;
+        private System.Windows.Forms.TextBox envelopeDecryptEnvelope;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
     }
 }
 

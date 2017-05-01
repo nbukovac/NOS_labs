@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -11,7 +12,7 @@ namespace CryptoAlgorithms.Algorithms
     public class RSA
     {
 
-        private static bool _optimalPadding = true;
+        private static readonly bool OptimalPadding = true;
 
         public static void GenerateKeys(int keySize, string privateFilePath, string publicFilePath)
         {
@@ -36,10 +37,38 @@ namespace CryptoAlgorithms.Algorithms
             using (var rsa = new RSACryptoServiceProvider(keySize))
             {
                 rsa.FromXmlString(publicKeyXml);
-                encrypted = rsa.Encrypt(bytes, _optimalPadding);
+                encrypted = rsa.Encrypt(bytes, OptimalPadding);
             }
 
             FileOperations.WriteToBinaryFile(outputFilePath, encrypted);
+        }
+
+        public static byte[] Encrypt(byte[] plainBytes, int keySize, string publicKeyFilePath)
+        {
+            var publicKeyXml = FileOperations.ReadFromTextFile(publicKeyFilePath);
+            byte[] encrypted;
+
+            using (var rsa = new RSACryptoServiceProvider(keySize))
+            {
+                rsa.FromXmlString(publicKeyXml);
+                encrypted = rsa.Encrypt(plainBytes, OptimalPadding);
+            }
+
+            return encrypted;
+        }
+
+        public static byte[] Decrypt(byte[] cipherBytes, int keySize, string privateKeyFilePath)
+        {
+            var privateKeyXml = FileOperations.ReadFromTextFile(privateKeyFilePath);
+            byte[] decrypted;
+
+            using (var rsa = new RSACryptoServiceProvider(keySize))
+            {
+                rsa.FromXmlString(privateKeyXml);
+                decrypted = rsa.Decrypt(cipherBytes, OptimalPadding);
+            }
+
+            return decrypted;
         }
 
         public static void Decrypt(string cipherTextFilePath, int keySize, string privateKeyFilePath,
@@ -52,7 +81,7 @@ namespace CryptoAlgorithms.Algorithms
             using (var rsa = new RSACryptoServiceProvider(keySize))
             {
                 rsa.FromXmlString(privateKeyXml);
-                decrypted = rsa.Decrypt(bytes, _optimalPadding);
+                decrypted = rsa.Decrypt(bytes, OptimalPadding);
             }
 
             FileOperations.WriteToBinaryFile(outputFilePath, decrypted);

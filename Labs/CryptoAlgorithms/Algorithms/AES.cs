@@ -35,6 +35,50 @@ namespace CryptoAlgorithms.Algorithms
             FileOperations.WriteToBinaryFile(outputFilePath, encrypted);
         }
 
+        public static byte[] Encrypt(byte[] key, byte[] iv, string plainTextFilePath)
+        {
+            byte[] encrypted;
+
+            using (var aes = Aes.Create())
+            {
+                var encryptor = aes.CreateEncryptor(key, iv);
+
+                using (var memoryStream = new MemoryStream())
+                {
+                    using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
+                    {
+                        var bytes = FileOperations.ReadFromBinaryFile(plainTextFilePath);
+                        cryptoStream.Write(bytes, 0, bytes.Length);
+                    }
+
+                    encrypted = memoryStream.ToArray();
+                }
+            }
+
+            return encrypted;
+        }
+
+        public static byte[] Decrypt(byte[] key, byte[] iv, byte[] cipherBytes)
+        {
+            byte[] decrypted;
+
+            using (var aes = Aes.Create())
+            {
+                var decryptor = aes.CreateDecryptor(key, iv);
+                decrypted = new byte[cipherBytes.Length];
+
+                using (var memoryStream = new MemoryStream(cipherBytes))
+                {
+                    using (var cryptoStream = new CryptoStream(memoryStream, decryptor, CryptoStreamMode.Read))
+                    {
+                        cryptoStream.Read(decrypted, 0, cipherBytes.Length);
+                    }
+                }
+            }
+
+            return decrypted;
+        }
+
         public static void Decrypt(string cipherTextFilePath, string keyFilePath, string ivFilePath,
             string outputFilePath)
         {

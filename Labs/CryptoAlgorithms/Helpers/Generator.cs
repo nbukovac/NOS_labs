@@ -7,25 +7,36 @@ namespace CryptoAlgorithms.Helpers
         private const int AesKeyBytes = 32;
         private const int AesIVBytes = 16;
 
-        public static void GenerateAesKey(string keyFilePath)
+        public static byte[] GenerateAesKey()
         {
             var bytes = new byte[AesKeyBytes];
             var random = new Random();
 
             random.NextBytes(bytes);
 
-            FileOperations.WriteToTextFile(keyFilePath, Converter.ByteArrayToString(bytes));
+            return bytes;
+        }
+
+        public static void GenerateAesKey(string keyFilePath)
+        {
+            FileOperations.WriteToTextFile(keyFilePath, Converter.ByteArrayToString(GenerateAesKey()));
         }
 
 
-        public static void GenerateAesInitializationVector(string ivFilePath)
+        public static byte[] GenerateAesInitializationVector()
         {
             var bytes = new byte[AesIVBytes];
             var random = new Random();
 
             random.NextBytes(bytes);
 
-            FileOperations.WriteToTextFile(ivFilePath, Converter.ByteArrayToString(bytes));
+            return bytes;
+        }
+
+        public static void GenerateAesInitializationVector(string ivFilePath)
+        {
+            FileOperations.WriteToTextFile(ivFilePath, 
+                Converter.ByteArrayToString(GenerateAesInitializationVector()));
         }
     }
 }
