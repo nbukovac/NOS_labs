@@ -11,6 +11,8 @@ namespace CryptoAlgorithms.Algorithms
     public class RSA
     {
 
+        private static bool _optimalPadding = true;
+
         public static void GenerateKeys(int keySize, string privateFilePath, string publicFilePath)
         {
             using (var rsa = new RSACryptoServiceProvider(keySize))
@@ -34,10 +36,26 @@ namespace CryptoAlgorithms.Algorithms
             using (var rsa = new RSACryptoServiceProvider(keySize))
             {
                 rsa.FromXmlString(publicKeyXml);
-                encrypted = rsa.Encrypt(bytes, true);
+                encrypted = rsa.Encrypt(bytes, _optimalPadding);
             }
 
             FileOperations.WriteToBinaryFile(outputFilePath, encrypted);
+        }
+
+        public static void Decrypt(string cipherTextFilePath, int keySize, string privateKeyFilePath,
+            string outputFilePath)
+        {
+            var privateKeyXml = FileOperations.ReadFromTextFile(privateKeyFilePath);
+            var bytes = FileOperations.ReadFromBinaryFile(cipherTextFilePath);
+            byte[] decrypted;
+
+            using (var rsa = new RSACryptoServiceProvider(keySize))
+            {
+                rsa.FromXmlString(privateKeyXml);
+                decrypted = rsa.Decrypt(bytes, _optimalPadding);
+            }
+
+            FileOperations.WriteToBinaryFile(outputFilePath, decrypted);
         }
 
     }

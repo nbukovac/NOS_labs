@@ -227,6 +227,44 @@ namespace CryptoAlgorithms
             }
         }
 
+        private void rsaStartDecrypt_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(rsaDecryptCipherFile.Text))
+            {
+                MessageBox.Show("Choose a file for decryption", "Choose cipher text", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(rsaDecryptPrivateKeyFile.Text))
+            {
+                rsaDecryptPrivateKeyFile.Text = _initialDirectory + "RSA_private.txt";
+            }
+            if (string.IsNullOrWhiteSpace(rsaDecryptPlainFile.Text))
+            {
+                rsaDecryptPlainFile.Text = _initialDirectory + "RSA_decrypted.txt";
+            }
+
+            if (ready)
+            {
+                RSA.Decrypt(rsaDecryptCipherFile.Text, int.Parse(rsaKeysSize.Text), rsaDecryptPrivateKeyFile.Text,
+                        rsaDecryptPlainFile.Text);
+            }
+        }
+
+        private void rsaDecryptPrivateBtn_Click(object sender, EventArgs e)
+        {
+            rsaDecryptPrivateKeyFile.Text = GetFileName();
+        }
+
+        private void rsaDecryptCipherBtn_Click(object sender, EventArgs e)
+        {
+            rsaDecryptCipherFile.Text = GetFileName();
+        }
+
         #endregion
+
+       
     }
 }

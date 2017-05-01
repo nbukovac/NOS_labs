@@ -79,6 +79,16 @@
             this.rsaEncryptPlainBtn = new System.Windows.Forms.Button();
             this.rsaEncryptPublicBtn = new System.Windows.Forms.Button();
             this.rsaStartEncrypt = new System.Windows.Forms.Button();
+            this.rsaDecryptBox = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.rsaDecryptCipherFile = new System.Windows.Forms.TextBox();
+            this.rsaDecryptPrivateKeyFile = new System.Windows.Forms.TextBox();
+            this.rsaDecryptPlainFile = new System.Windows.Forms.TextBox();
+            this.rsaDecryptCipherBtn = new System.Windows.Forms.Button();
+            this.rsaDecryptPrivateBtn = new System.Windows.Forms.Button();
+            this.rsaStartDecrypt = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesDecryptGroup.SuspendLayout();
@@ -86,6 +96,7 @@
             this.sha1Tab.SuspendLayout();
             this.rsaTab.SuspendLayout();
             this.rsaEncryptBox.SuspendLayout();
+            this.rsaDecryptBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -473,6 +484,7 @@
             // 
             // rsaTab
             // 
+            this.rsaTab.Controls.Add(this.rsaDecryptBox);
             this.rsaTab.Controls.Add(this.rsaEncryptBox);
             this.rsaTab.Controls.Add(this.rsaKeysSize);
             this.rsaTab.Controls.Add(this.label8);
@@ -545,7 +557,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 48);
+            this.label10.Location = new System.Drawing.Point(7, 55);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(72, 13);
             this.label10.TabIndex = 1;
@@ -554,7 +566,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(10, 82);
+            this.label11.Location = new System.Drawing.Point(7, 89);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(73, 13);
             this.label11.TabIndex = 2;
@@ -611,6 +623,102 @@
             this.rsaStartEncrypt.UseVisualStyleBackColor = true;
             this.rsaStartEncrypt.Click += new System.EventHandler(this.rsaStartEncrypt_Click);
             // 
+            // rsaDecryptBox
+            // 
+            this.rsaDecryptBox.Controls.Add(this.rsaStartDecrypt);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPrivateBtn);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptCipherBtn);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPlainFile);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPrivateKeyFile);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptCipherFile);
+            this.rsaDecryptBox.Controls.Add(this.label14);
+            this.rsaDecryptBox.Controls.Add(this.label13);
+            this.rsaDecryptBox.Controls.Add(this.label12);
+            this.rsaDecryptBox.Location = new System.Drawing.Point(21, 233);
+            this.rsaDecryptBox.Name = "rsaDecryptBox";
+            this.rsaDecryptBox.Size = new System.Drawing.Size(838, 203);
+            this.rsaDecryptBox.TabIndex = 4;
+            this.rsaDecryptBox.TabStop = false;
+            this.rsaDecryptBox.Text = "Decrypt";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Cipher file text";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(10, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Private key file";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(13, 102);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Plain text file";
+            // 
+            // rsaDecryptCipherFile
+            // 
+            this.rsaDecryptCipherFile.Location = new System.Drawing.Point(104, 33);
+            this.rsaDecryptCipherFile.Name = "rsaDecryptCipherFile";
+            this.rsaDecryptCipherFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaDecryptCipherFile.TabIndex = 3;
+            // 
+            // rsaDecryptPrivateKeyFile
+            // 
+            this.rsaDecryptPrivateKeyFile.Location = new System.Drawing.Point(104, 67);
+            this.rsaDecryptPrivateKeyFile.Name = "rsaDecryptPrivateKeyFile";
+            this.rsaDecryptPrivateKeyFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaDecryptPrivateKeyFile.TabIndex = 4;
+            // 
+            // rsaDecryptPlainFile
+            // 
+            this.rsaDecryptPlainFile.Location = new System.Drawing.Point(104, 94);
+            this.rsaDecryptPlainFile.Name = "rsaDecryptPlainFile";
+            this.rsaDecryptPlainFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaDecryptPlainFile.TabIndex = 5;
+            // 
+            // rsaDecryptCipherBtn
+            // 
+            this.rsaDecryptCipherBtn.Location = new System.Drawing.Point(654, 28);
+            this.rsaDecryptCipherBtn.Name = "rsaDecryptCipherBtn";
+            this.rsaDecryptCipherBtn.Size = new System.Drawing.Size(75, 23);
+            this.rsaDecryptCipherBtn.TabIndex = 6;
+            this.rsaDecryptCipherBtn.Text = "Choose file";
+            this.rsaDecryptCipherBtn.UseVisualStyleBackColor = true;
+            this.rsaDecryptCipherBtn.Click += new System.EventHandler(this.rsaDecryptCipherBtn_Click);
+            // 
+            // rsaDecryptPrivateBtn
+            // 
+            this.rsaDecryptPrivateBtn.Location = new System.Drawing.Point(654, 67);
+            this.rsaDecryptPrivateBtn.Name = "rsaDecryptPrivateBtn";
+            this.rsaDecryptPrivateBtn.Size = new System.Drawing.Size(75, 23);
+            this.rsaDecryptPrivateBtn.TabIndex = 7;
+            this.rsaDecryptPrivateBtn.Text = "Choose file";
+            this.rsaDecryptPrivateBtn.UseVisualStyleBackColor = true;
+            this.rsaDecryptPrivateBtn.Click += new System.EventHandler(this.rsaDecryptPrivateBtn_Click);
+            // 
+            // rsaStartDecrypt
+            // 
+            this.rsaStartDecrypt.Location = new System.Drawing.Point(378, 143);
+            this.rsaStartDecrypt.Name = "rsaStartDecrypt";
+            this.rsaStartDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.rsaStartDecrypt.TabIndex = 8;
+            this.rsaStartDecrypt.Text = "Decrypt";
+            this.rsaStartDecrypt.UseVisualStyleBackColor = true;
+            this.rsaStartDecrypt.Click += new System.EventHandler(this.rsaStartDecrypt_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -631,6 +739,8 @@
             this.rsaTab.PerformLayout();
             this.rsaEncryptBox.ResumeLayout(false);
             this.rsaEncryptBox.PerformLayout();
+            this.rsaDecryptBox.ResumeLayout(false);
+            this.rsaDecryptBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -688,6 +798,16 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button rsaEncryptPublicBtn;
         private System.Windows.Forms.Button rsaStartEncrypt;
+        private System.Windows.Forms.GroupBox rsaDecryptBox;
+        private System.Windows.Forms.Button rsaStartDecrypt;
+        private System.Windows.Forms.Button rsaDecryptPrivateBtn;
+        private System.Windows.Forms.Button rsaDecryptCipherBtn;
+        private System.Windows.Forms.TextBox rsaDecryptPlainFile;
+        private System.Windows.Forms.TextBox rsaDecryptPrivateKeyFile;
+        private System.Windows.Forms.TextBox rsaDecryptCipherFile;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
     }
 }
 
