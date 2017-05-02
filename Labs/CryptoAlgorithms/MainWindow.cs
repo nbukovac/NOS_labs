@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CryptoAlgorithms.Algorithms;
 using CryptoAlgorithms.Helpers;
@@ -14,7 +7,6 @@ namespace CryptoAlgorithms
 {
     public partial class MainWindow : Form
     {
-
         private readonly string _initialDirectory = Environment.CurrentDirectory + @"\Files\";
 
         public MainWindow()
@@ -25,7 +17,7 @@ namespace CryptoAlgorithms
 
         private string GetFileName()
         {
-            var dialog = new OpenFileDialog()
+            var dialog = new OpenFileDialog
             {
                 InitialDirectory = _initialDirectory
             };
@@ -98,7 +90,7 @@ namespace CryptoAlgorithms
             if (ready)
             {
                 AES.Encrypt(aesEncryptPlainFile.Text, aesEncryptKeyFile.Text, aesEncryptIVFile.Text,
-                        aesEncryptCipherFile.Text); 
+                    aesEncryptCipherFile.Text);
             }
         }
 
@@ -147,7 +139,7 @@ namespace CryptoAlgorithms
             if (ready)
             {
                 AES.Decrypt(aesDecryptCipherFile.Text, aesDecryptKeyFile.Text, aesDecryptIvFile.Text,
-                        aesDecryptPlainFile.Text); 
+                    aesDecryptPlainFile.Text);
             }
         }
 
@@ -223,7 +215,7 @@ namespace CryptoAlgorithms
             if (ready)
             {
                 RSA.Encrypt(rsaEncryptPlainFile.Text, int.Parse(rsaKeysSize.Text), rsaEncryptPublicKey.Text,
-                        rsaEncryptCipherFile.Text); 
+                    rsaEncryptCipherFile.Text);
             }
         }
 
@@ -249,7 +241,7 @@ namespace CryptoAlgorithms
             if (ready)
             {
                 RSA.Decrypt(rsaDecryptCipherFile.Text, int.Parse(rsaKeysSize.Text), rsaDecryptPrivateKeyFile.Text,
-                        rsaDecryptPlainFile.Text);
+                    rsaDecryptPlainFile.Text);
             }
         }
 
@@ -262,7 +254,6 @@ namespace CryptoAlgorithms
         {
             rsaDecryptCipherFile.Text = GetFileName();
         }
-
 
         #endregion
 
@@ -289,7 +280,7 @@ namespace CryptoAlgorithms
 
             if (ready)
             {
-                DigitalEnvelope.CreateEnvelope(envelopeEncryptPlain.Text, int.Parse(rsaKeysSize.Text), 
+                DigitalEnvelope.CreateEnvelope(envelopeEncryptPlain.Text, int.Parse(rsaKeysSize.Text),
                     envelopeEncryptPublic.Text, envelopeEncryptEnvelope.Text);
             }
         }
@@ -341,6 +332,5 @@ namespace CryptoAlgorithms
         }
 
         #endregion
-
     }
 }

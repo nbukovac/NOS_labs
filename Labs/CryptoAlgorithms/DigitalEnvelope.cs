@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CryptoAlgorithms.Algorithms;
 using CryptoAlgorithms.Helpers;
 
@@ -10,8 +6,7 @@ namespace CryptoAlgorithms
 {
     public class DigitalEnvelope
     {
-
-        public static void CreateEnvelope(string plainTextFilePath, int keySize, string publicKeyFilePath, 
+        public static void CreateEnvelope(string plainTextFilePath, int keySize, string publicKeyFilePath,
             string outputFilePath)
         {
             var aesKey = Generator.GenerateAesKey();
@@ -54,12 +49,12 @@ namespace CryptoAlgorithms
             key = new byte[keyDecrypted.Length - 16];
             iv = new byte[16];
 
-            for (int i = 0; i < keyDecrypted.Length - 16; i++)
+            for (var i = 0; i < keyDecrypted.Length - 16; i++)
             {
                 key[i] = keyDecrypted[i];
             }
 
-            for (int i = 0; i < 16; i++)
+            for (var i = 0; i < 16; i++)
             {
                 iv[i] = keyDecrypted[key.Length + i];
             }
@@ -67,12 +62,12 @@ namespace CryptoAlgorithms
 
         private static void CreateRsaPlainText(byte[] aesKey, byte[] rsaPlain, byte[] aesIv)
         {
-            for (int i = 0; i < aesKey.Length; i++)
+            for (var i = 0; i < aesKey.Length; i++)
             {
                 rsaPlain[i] = aesKey[i];
             }
 
-            for (int i = aesKey.Length; i < aesIv.Length + aesKey.Length; i++)
+            for (var i = aesKey.Length; i < aesIv.Length + aesKey.Length; i++)
             {
                 rsaPlain[i] = aesIv[i - aesKey.Length];
             }

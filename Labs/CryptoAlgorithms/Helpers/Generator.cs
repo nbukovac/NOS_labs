@@ -5,7 +5,7 @@ namespace CryptoAlgorithms.Helpers
     public class Generator
     {
         private const int AesKeyBytes = 32;
-        private const int AesIVBytes = 16;
+        private const int AesIvBytes = 16;
 
         public static byte[] GenerateAesKey()
         {
@@ -25,7 +25,7 @@ namespace CryptoAlgorithms.Helpers
 
         public static byte[] GenerateAesInitializationVector()
         {
-            var bytes = new byte[AesIVBytes];
+            var bytes = new byte[AesIvBytes];
             var random = new Random();
 
             random.NextBytes(bytes);

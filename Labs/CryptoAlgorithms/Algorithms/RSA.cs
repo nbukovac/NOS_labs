@@ -1,17 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Text;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Security.Cryptography;
 using CryptoAlgorithms.Helpers;
 
 namespace CryptoAlgorithms.Algorithms
 {
     public class RSA
     {
-
         private static readonly bool OptimalPadding = true;
 
         public static void GenerateKeys(int keySize, string privateFilePath, string publicFilePath)
@@ -27,7 +20,7 @@ namespace CryptoAlgorithms.Algorithms
             }
         }
 
-        public static void Encrypt(string plainTextFilePath, int keySize, string publicKeyFilePath, 
+        public static void Encrypt(string plainTextFilePath, int keySize, string publicKeyFilePath,
             string outputFilePath)
         {
             var publicKeyXml = FileOperations.ReadFromTextFile(publicKeyFilePath);
@@ -86,7 +79,5 @@ namespace CryptoAlgorithms.Algorithms
 
             FileOperations.WriteToBinaryFile(outputFilePath, decrypted);
         }
-
     }
-
 }

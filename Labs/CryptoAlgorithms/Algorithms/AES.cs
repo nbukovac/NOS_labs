@@ -10,7 +10,7 @@ namespace CryptoAlgorithms.Algorithms
             string outputFilePath)
         {
             var key = GetKeyFromFile(keyFilePath);
-            var iv = GetIVFromFile(ivFilePath);
+            var iv = GetIvFromFile(ivFilePath);
             byte[] encrypted;
 
             using (var aes = Aes.Create())
@@ -83,7 +83,7 @@ namespace CryptoAlgorithms.Algorithms
             string outputFilePath)
         {
             var key = GetKeyFromFile(keyFilePath);
-            var iv = GetIVFromFile(ivFilePath);
+            var iv = GetIvFromFile(ivFilePath);
             byte[] decrypted;
 
             using (var aes = Aes.Create())
@@ -107,7 +107,7 @@ namespace CryptoAlgorithms.Algorithms
             FileOperations.WriteToBinaryFile(outputFilePath, decrypted);
         }
 
-        private static string GetIVFromFile(string ivFilePath)
+        private static string GetIvFromFile(string ivFilePath)
         {
             return FileOperations.ReadFromTextFile(ivFilePath);
         }
