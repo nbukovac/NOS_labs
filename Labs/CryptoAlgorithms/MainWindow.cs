@@ -417,5 +417,111 @@ namespace CryptoAlgorithms
 
         #endregion
 
+        #region SignedEnvelope
+
+        private void signedEnvelopeCreateBtn_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(signedEnvelopeCreatePlain.Text))
+            {
+                MessageBox.Show("Choose a plain text file", "Choose a plain text file", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(signedEnvelopeCreateSenderPrivate.Text))
+            {
+                signedEnvelopeCreateSenderPrivate.Text = _initialDirectory + "RSA_sender_private.txt";
+            }
+            if (string.IsNullOrWhiteSpace(signedEnvelopeCreateReceiverPublic.Text))
+            {
+                signedEnvelopeCreateReceiverPublic.Text = _initialDirectory + "RSA_public.txt";
+            }
+            if (string.IsNullOrWhiteSpace(signedEnvelopeCreateEnvelope.Text))
+            {
+                signedEnvelopeCreateEnvelope.Text = _initialDirectory + "Signed_envelope.txt";
+            }
+
+            if (ready)
+            {
+               SignedEnvelope.CreateSignedEnvelope(signedEnvelopeCreatePlain.Text, int.Parse(rsaKeysSize.Text),
+                   signedEnvelopeCreateReceiverPublic.Text, signedEnvelopeCreateSenderPrivate.Text,
+                   signedEnvelopeCreateEnvelope.Text);
+            }
+        }
+
+        private void signedEnvelopeCreateSenderPrivateBtn_Click(object sender, EventArgs e)
+        {
+            signedEnvelopeCreateSenderPrivate.Text = GetFileName();
+        }
+
+        private void signedEnvelopeCreateReceiverPublicBtn_Click(object sender, EventArgs e)
+        {
+            signedEnvelopeCreateReceiverPublic.Text = GetFileName();
+        }
+
+        private void signedEnvelopeCreatePlainBtn_Click(object sender, EventArgs e)
+        {
+            signedEnvelopeCreatePlain.Text = GetFileName();
+        }
+
+        private void signedEnvelopeOpenEnvelopeBtn_Click(object sender, EventArgs e)
+        {
+            signedEnvelopeOpenEnvelope.Text = GetFileName();
+        }
+
+        private void signedEnvelopeOpenReceiverPrivateBtn_Click(object sender, EventArgs e)
+        {
+            signedEnvelopeOpenReceiverPrivate.Text = GetFileName();
+        }
+
+        private void signedEnvelopeOpenSenderPublicBtn_Click(object sender, EventArgs e)
+        {
+            signedEnvelopeOpenSenderPublic.Text = GetFileName();
+        }
+
+        private void signedEnvelopeOpenBtn_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(signedEnvelopeOpenEnvelope.Text))
+            {
+                MessageBox.Show("Choose a signed envelope file", "Choose a signed envelope file", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(signedEnvelopeOpenReceiverPrivate.Text))
+            {
+                signedEnvelopeOpenReceiverPrivate.Text = _initialDirectory + "RSA_private.txt";
+            }
+            if (string.IsNullOrWhiteSpace(signedEnvelopeOpenSenderPublic.Text))
+            {
+                signedEnvelopeOpenSenderPublic.Text = _initialDirectory + "RSA_sender_public.txt";
+            }
+            if (string.IsNullOrWhiteSpace(signedEnvelopeOpenPlain.Text))
+            {
+                signedEnvelopeOpenPlain.Text = _initialDirectory + "Opened_signed_envelope.txt";
+            }
+
+            if (ready)
+            {
+                var verified = SignedEnvelope.OpenSignedEnvelope(signedEnvelopeOpenEnvelope.Text, 
+                    int.Parse(rsaKeysSize.Text), signedEnvelopeOpenReceiverPrivate.Text, 
+                    signedEnvelopeOpenSenderPublic.Text, signedEnvelopeOpenPlain.Text);
+
+                if (verified)
+                {
+                    MessageBox.Show("Sender is verified", "Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Sender is not verified", "Not verified", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        #endregion
+
     }
 }
