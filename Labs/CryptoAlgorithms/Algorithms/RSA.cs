@@ -79,5 +79,32 @@ namespace CryptoAlgorithms.Algorithms
 
             FileOperations.WriteToBinaryFile(outputFilePath, decrypted);
         }
+
+        public static byte[] SignData(byte[] data, int keySize, string privateKeyFilePath, object hashAlgorithm)
+        {
+            byte[] signature;
+
+            using (var rsa = new RSACryptoServiceProvider(keySize))
+            {
+                rsa.FromXmlString(privateKeyFilePath);
+                signature = rsa.SignData(data, hashAlgorithm);
+            }
+
+            return signature;
+        }
+
+        public static bool VerifyData(byte[] data, int keySize, string publicKeyFilePath, object hashAlgorithm, 
+            byte[] signature)
+        {
+            bool verified = false;
+
+            using (var rsa = new RSACryptoServiceProvider(keySize))
+            {
+                rsa.FromXmlString(publicKeyFilePath);
+                verified = rsa.VerifyData(data, hashAlgorithm, signature);
+            }
+
+            return verified;
+        }
     }
 }

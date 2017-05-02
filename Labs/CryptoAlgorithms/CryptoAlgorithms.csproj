@@ -50,6 +50,7 @@
     <Compile Include="Algorithms\RSA.cs" />
     <Compile Include="Algorithms\SHA1.cs" />
     <Compile Include="DigitalEnvelope.cs" />
+    <Compile Include="DigitalSignature.cs" />
     <Compile Include="Helpers\FileOperations.cs" />
     <Compile Include="Helpers\Generator.cs" />
     <Compile Include="MainWindow.cs">
