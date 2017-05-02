@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using CryptoAlgorithms.Helpers;
 using RSA = CryptoAlgorithms.Algorithms.RSA;
 
@@ -11,7 +8,6 @@ namespace CryptoAlgorithms
 {
     public class DigitalSignature
     {
-
         public static void CreateSignature(string plainTextFilePath, int keySize, string privateKeyFilePath,
             string outputFilePath)
         {
@@ -48,9 +44,9 @@ namespace CryptoAlgorithms
             var signatureTextSplit = signatureText.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
 
             var signature = Converter.HexStringToBytes(signatureTextSplit[1]);
-            var message = Encoding.ASCII.GetBytes(signatureTextSplit[3] + Environment.NewLine + signatureTextSplit[4] 
-                + Environment.NewLine + Environment.NewLine +
-                signatureTextSplit[5] + Environment.NewLine + signatureTextSplit[6]);
+            var message = Encoding.ASCII.GetBytes(signatureTextSplit[3] + Environment.NewLine + signatureTextSplit[4]
+                                                  + Environment.NewLine + Environment.NewLine +
+                                                  signatureTextSplit[5] + Environment.NewLine + signatureTextSplit[6]);
 
             return RSA.VerifyData(message, keySize, publicKeyFilePath, new SHA1CryptoServiceProvider(), signature);
         }
@@ -65,6 +61,5 @@ namespace CryptoAlgorithms
 
             return RSA.VerifyData(message, keySize, publicKeyFilePath, new SHA1CryptoServiceProvider(), signature);
         }
-
     }
 }

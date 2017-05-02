@@ -93,10 +93,10 @@ namespace CryptoAlgorithms.Algorithms
             return signature;
         }
 
-        public static bool VerifyData(byte[] data, int keySize, string publicKeyFilePath, object hashAlgorithm, 
+        public static bool VerifyData(byte[] data, int keySize, string publicKeyFilePath, object hashAlgorithm,
             byte[] signature)
         {
-            bool verified = false;
+            var verified = false;
 
             using (var rsa = new RSACryptoServiceProvider(keySize))
             {

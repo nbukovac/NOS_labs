@@ -1,15 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CryptoAlgorithms.Helpers;
 
 namespace CryptoAlgorithms
 {
     public class SignedEnvelope
     {
-
         public static void CreateSignedEnvelope(string plainTextFile, int keySize, string receiverPublicKeyFilePath,
             string senderPrivateKeyFilePath, string outputFilePath)
         {
@@ -18,13 +13,15 @@ namespace CryptoAlgorithms
             DigitalEnvelope.CreateEnvelope(plainTextFile, keySize, receiverPublicKeyFilePath,
                 tmpEnvelopeFilePath);
 
-            DigitalSignature.CreateEnvelopeSignature(tmpEnvelopeFilePath, keySize, senderPrivateKeyFilePath, outputFilePath);
+            DigitalSignature.CreateEnvelopeSignature(tmpEnvelopeFilePath, keySize, senderPrivateKeyFilePath,
+                outputFilePath);
         }
 
         public static bool OpenSignedEnvelope(string signedEnvelopeFilePath, int keySize,
             string receiverPrivateKeyFilePath, string senderPublicKeyFilePath, string outputFilePath)
         {
-            var verified = DigitalSignature.VerifyEnvelopeSignature(signedEnvelopeFilePath, keySize, senderPublicKeyFilePath);
+            var verified = DigitalSignature.VerifyEnvelopeSignature(signedEnvelopeFilePath, keySize,
+                senderPublicKeyFilePath);
 
             var file = FileOperations.ReadFromTextFile(signedEnvelopeFilePath);
             var fileSplit = file.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
@@ -35,6 +32,5 @@ namespace CryptoAlgorithms
 
             return verified;
         }
-
     }
 }
