@@ -111,51 +111,51 @@
             this.envelopeEncryptPlain = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.signatureTab = new System.Windows.Forms.TabPage();
-            this.signatureCreateBox = new System.Windows.Forms.GroupBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.signatureSignPlain = new System.Windows.Forms.TextBox();
-            this.signatureSignPrivateKey = new System.Windows.Forms.TextBox();
-            this.signatureSignSignature = new System.Windows.Forms.TextBox();
-            this.signatureSignPlainBtn = new System.Windows.Forms.Button();
-            this.signatureSignPrivateBtn = new System.Windows.Forms.Button();
-            this.signatureCreateSignature = new System.Windows.Forms.Button();
             this.signatureVerifyBox = new System.Windows.Forms.GroupBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.signatureVerifySignatureFile = new System.Windows.Forms.TextBox();
-            this.signatureVerifyPublicKey = new System.Windows.Forms.TextBox();
-            this.signatureVerifySignatureBtn = new System.Windows.Forms.Button();
-            this.signatureVerifyPublicBtn = new System.Windows.Forms.Button();
             this.signatureVerifyBtn = new System.Windows.Forms.Button();
+            this.signatureVerifyPublicBtn = new System.Windows.Forms.Button();
+            this.signatureVerifySignatureBtn = new System.Windows.Forms.Button();
+            this.signatureVerifyPublicKey = new System.Windows.Forms.TextBox();
+            this.signatureVerifySignatureFile = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.signatureCreateBox = new System.Windows.Forms.GroupBox();
+            this.signatureCreateSignature = new System.Windows.Forms.Button();
+            this.signatureSignPrivateBtn = new System.Windows.Forms.Button();
+            this.signatureSignPlainBtn = new System.Windows.Forms.Button();
+            this.signatureSignSignature = new System.Windows.Forms.TextBox();
+            this.signatureSignPrivateKey = new System.Windows.Forms.TextBox();
+            this.signatureSignPlain = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.signedEnvelopeTab = new System.Windows.Forms.TabPage();
-            this.signedEnvelopeCreateBox = new System.Windows.Forms.GroupBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.signedEnvelopeCreatePlain = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeCreateReceiverPublic = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeCreateSenderPrivate = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeCreateEnvelope = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeCreatePlainBtn = new System.Windows.Forms.Button();
-            this.signedEnvelopeCreateReceiverPublicBtn = new System.Windows.Forms.Button();
-            this.signedEnvelopeCreateSenderPrivateBtn = new System.Windows.Forms.Button();
-            this.signedEnvelopeCreateBtn = new System.Windows.Forms.Button();
             this.signedEnvelopeOpenBox = new System.Windows.Forms.GroupBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.signedEnvelopeOpenEnvelope = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeOpenReceiverPrivate = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeOpenSenderPublic = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeOpenPlain = new System.Windows.Forms.TextBox();
-            this.signedEnvelopeOpenEnvelopeBtn = new System.Windows.Forms.Button();
-            this.signedEnvelopeOpenReceiverPrivateBtn = new System.Windows.Forms.Button();
-            this.signedEnvelopeOpenSenderPublicBtn = new System.Windows.Forms.Button();
             this.signedEnvelopeOpenBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeOpenSenderPublicBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeOpenReceiverPrivateBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeOpenEnvelopeBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeOpenPlain = new System.Windows.Forms.TextBox();
+            this.signedEnvelopeOpenSenderPublic = new System.Windows.Forms.TextBox();
+            this.signedEnvelopeOpenReceiverPrivate = new System.Windows.Forms.TextBox();
+            this.signedEnvelopeOpenEnvelope = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.signedEnvelopeCreateBox = new System.Windows.Forms.GroupBox();
+            this.signedEnvelopeCreateBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeCreateSenderPrivateBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeCreateReceiverPublicBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeCreatePlainBtn = new System.Windows.Forms.Button();
+            this.signedEnvelopeCreateEnvelope = new System.Windows.Forms.TextBox();
+            this.signedEnvelopeCreateSenderPrivate = new System.Windows.Forms.TextBox();
+            this.signedEnvelopeCreateReceiverPublic = new System.Windows.Forms.TextBox();
+            this.signedEnvelopeCreatePlain = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesDecryptGroup.SuspendLayout();
@@ -168,11 +168,11 @@
             this.envelopeDecryptBox.SuspendLayout();
             this.envelopeEncryptBox.SuspendLayout();
             this.signatureTab.SuspendLayout();
-            this.signatureCreateBox.SuspendLayout();
             this.signatureVerifyBox.SuspendLayout();
+            this.signatureCreateBox.SuspendLayout();
             this.signedEnvelopeTab.SuspendLayout();
-            this.signedEnvelopeCreateBox.SuspendLayout();
             this.signedEnvelopeOpenBox.SuspendLayout();
+            this.signedEnvelopeCreateBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -1014,6 +1014,84 @@
             this.signatureTab.Text = "Signature";
             this.signatureTab.UseVisualStyleBackColor = true;
             // 
+            // signatureVerifyBox
+            // 
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifyBtn);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifyPublicBtn);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifySignatureBtn);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifyPublicKey);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifySignatureFile);
+            this.signatureVerifyBox.Controls.Add(this.label25);
+            this.signatureVerifyBox.Controls.Add(this.label24);
+            this.signatureVerifyBox.Location = new System.Drawing.Point(19, 202);
+            this.signatureVerifyBox.Name = "signatureVerifyBox";
+            this.signatureVerifyBox.Size = new System.Drawing.Size(591, 121);
+            this.signatureVerifyBox.TabIndex = 1;
+            this.signatureVerifyBox.TabStop = false;
+            this.signatureVerifyBox.Text = "Verify";
+            // 
+            // signatureVerifyBtn
+            // 
+            this.signatureVerifyBtn.Location = new System.Drawing.Point(277, 87);
+            this.signatureVerifyBtn.Name = "signatureVerifyBtn";
+            this.signatureVerifyBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureVerifyBtn.TabIndex = 6;
+            this.signatureVerifyBtn.Text = "Verify";
+            this.signatureVerifyBtn.UseVisualStyleBackColor = true;
+            this.signatureVerifyBtn.Click += new System.EventHandler(this.signatureVerifyBtn_Click);
+            // 
+            // signatureVerifyPublicBtn
+            // 
+            this.signatureVerifyPublicBtn.Location = new System.Drawing.Point(504, 47);
+            this.signatureVerifyPublicBtn.Name = "signatureVerifyPublicBtn";
+            this.signatureVerifyPublicBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureVerifyPublicBtn.TabIndex = 5;
+            this.signatureVerifyPublicBtn.Text = "Choose file";
+            this.signatureVerifyPublicBtn.UseVisualStyleBackColor = true;
+            this.signatureVerifyPublicBtn.Click += new System.EventHandler(this.signatureVerifyPublicBtn_Click);
+            // 
+            // signatureVerifySignatureBtn
+            // 
+            this.signatureVerifySignatureBtn.Location = new System.Drawing.Point(504, 20);
+            this.signatureVerifySignatureBtn.Name = "signatureVerifySignatureBtn";
+            this.signatureVerifySignatureBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureVerifySignatureBtn.TabIndex = 4;
+            this.signatureVerifySignatureBtn.Text = "Choose file";
+            this.signatureVerifySignatureBtn.UseVisualStyleBackColor = true;
+            this.signatureVerifySignatureBtn.Click += new System.EventHandler(this.signatureVerifySignatureBtn_Click);
+            // 
+            // signatureVerifyPublicKey
+            // 
+            this.signatureVerifyPublicKey.Location = new System.Drawing.Point(127, 47);
+            this.signatureVerifyPublicKey.Name = "signatureVerifyPublicKey";
+            this.signatureVerifyPublicKey.Size = new System.Drawing.Size(343, 20);
+            this.signatureVerifyPublicKey.TabIndex = 3;
+            // 
+            // signatureVerifySignatureFile
+            // 
+            this.signatureVerifySignatureFile.Location = new System.Drawing.Point(127, 20);
+            this.signatureVerifySignatureFile.Name = "signatureVerifySignatureFile";
+            this.signatureVerifySignatureFile.Size = new System.Drawing.Size(343, 20);
+            this.signatureVerifySignatureFile.TabIndex = 2;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(10, 47);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(108, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Sender public key file";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(10, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Signature file";
+            // 
             // signatureCreateBox
             // 
             this.signatureCreateBox.Controls.Add(this.signatureCreateSignature);
@@ -1032,63 +1110,15 @@
             this.signatureCreateBox.TabStop = false;
             this.signatureCreateBox.Text = "Sign";
             // 
-            // label21
+            // signatureCreateSignature
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(7, 20);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(66, 13);
-            this.label21.TabIndex = 0;
-            this.label21.Text = "Plain text file";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(7, 48);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(112, 13);
-            this.label22.TabIndex = 1;
-            this.label22.Text = "Sender private key file";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(7, 83);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(98, 13);
-            this.label23.TabIndex = 2;
-            this.label23.Text = "Digital signature file";
-            // 
-            // signatureSignPlain
-            // 
-            this.signatureSignPlain.Location = new System.Drawing.Point(127, 20);
-            this.signatureSignPlain.Name = "signatureSignPlain";
-            this.signatureSignPlain.Size = new System.Drawing.Size(577, 20);
-            this.signatureSignPlain.TabIndex = 3;
-            // 
-            // signatureSignPrivateKey
-            // 
-            this.signatureSignPrivateKey.Location = new System.Drawing.Point(127, 48);
-            this.signatureSignPrivateKey.Name = "signatureSignPrivateKey";
-            this.signatureSignPrivateKey.Size = new System.Drawing.Size(577, 20);
-            this.signatureSignPrivateKey.TabIndex = 4;
-            // 
-            // signatureSignSignature
-            // 
-            this.signatureSignSignature.Location = new System.Drawing.Point(127, 83);
-            this.signatureSignSignature.Name = "signatureSignSignature";
-            this.signatureSignSignature.Size = new System.Drawing.Size(577, 20);
-            this.signatureSignSignature.TabIndex = 5;
-            // 
-            // signatureSignPlainBtn
-            // 
-            this.signatureSignPlainBtn.Location = new System.Drawing.Point(723, 20);
-            this.signatureSignPlainBtn.Name = "signatureSignPlainBtn";
-            this.signatureSignPlainBtn.Size = new System.Drawing.Size(75, 23);
-            this.signatureSignPlainBtn.TabIndex = 6;
-            this.signatureSignPlainBtn.Text = "Choose file";
-            this.signatureSignPlainBtn.UseVisualStyleBackColor = true;
-            this.signatureSignPlainBtn.Click += new System.EventHandler(this.signatureSignPlainBtn_Click);
+            this.signatureCreateSignature.Location = new System.Drawing.Point(427, 109);
+            this.signatureCreateSignature.Name = "signatureCreateSignature";
+            this.signatureCreateSignature.Size = new System.Drawing.Size(91, 23);
+            this.signatureCreateSignature.TabIndex = 8;
+            this.signatureCreateSignature.Text = "Sign message";
+            this.signatureCreateSignature.UseVisualStyleBackColor = true;
+            this.signatureCreateSignature.Click += new System.EventHandler(this.signatureCreateSignature_Click);
             // 
             // signatureSignPrivateBtn
             // 
@@ -1100,93 +1130,63 @@
             this.signatureSignPrivateBtn.UseVisualStyleBackColor = true;
             this.signatureSignPrivateBtn.Click += new System.EventHandler(this.signatureSignPrivateBtn_Click);
             // 
-            // signatureCreateSignature
+            // signatureSignPlainBtn
             // 
-            this.signatureCreateSignature.Location = new System.Drawing.Point(427, 109);
-            this.signatureCreateSignature.Name = "signatureCreateSignature";
-            this.signatureCreateSignature.Size = new System.Drawing.Size(91, 23);
-            this.signatureCreateSignature.TabIndex = 8;
-            this.signatureCreateSignature.Text = "Sign message";
-            this.signatureCreateSignature.UseVisualStyleBackColor = true;
-            this.signatureCreateSignature.Click += new System.EventHandler(this.signatureCreateSignature_Click);
+            this.signatureSignPlainBtn.Location = new System.Drawing.Point(723, 20);
+            this.signatureSignPlainBtn.Name = "signatureSignPlainBtn";
+            this.signatureSignPlainBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureSignPlainBtn.TabIndex = 6;
+            this.signatureSignPlainBtn.Text = "Choose file";
+            this.signatureSignPlainBtn.UseVisualStyleBackColor = true;
+            this.signatureSignPlainBtn.Click += new System.EventHandler(this.signatureSignPlainBtn_Click);
             // 
-            // signatureVerifyBox
+            // signatureSignSignature
             // 
-            this.signatureVerifyBox.Controls.Add(this.signatureVerifyBtn);
-            this.signatureVerifyBox.Controls.Add(this.signatureVerifyPublicBtn);
-            this.signatureVerifyBox.Controls.Add(this.signatureVerifySignatureBtn);
-            this.signatureVerifyBox.Controls.Add(this.signatureVerifyPublicKey);
-            this.signatureVerifyBox.Controls.Add(this.signatureVerifySignatureFile);
-            this.signatureVerifyBox.Controls.Add(this.label25);
-            this.signatureVerifyBox.Controls.Add(this.label24);
-            this.signatureVerifyBox.Location = new System.Drawing.Point(19, 202);
-            this.signatureVerifyBox.Name = "signatureVerifyBox";
-            this.signatureVerifyBox.Size = new System.Drawing.Size(591, 121);
-            this.signatureVerifyBox.TabIndex = 1;
-            this.signatureVerifyBox.TabStop = false;
-            this.signatureVerifyBox.Text = "Verify";
+            this.signatureSignSignature.Location = new System.Drawing.Point(127, 83);
+            this.signatureSignSignature.Name = "signatureSignSignature";
+            this.signatureSignSignature.Size = new System.Drawing.Size(577, 20);
+            this.signatureSignSignature.TabIndex = 5;
             // 
-            // label24
+            // signatureSignPrivateKey
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(10, 20);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(68, 13);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Signature file";
+            this.signatureSignPrivateKey.Location = new System.Drawing.Point(127, 48);
+            this.signatureSignPrivateKey.Name = "signatureSignPrivateKey";
+            this.signatureSignPrivateKey.Size = new System.Drawing.Size(577, 20);
+            this.signatureSignPrivateKey.TabIndex = 4;
             // 
-            // label25
+            // signatureSignPlain
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(10, 47);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(108, 13);
-            this.label25.TabIndex = 1;
-            this.label25.Text = "Sender public key file";
+            this.signatureSignPlain.Location = new System.Drawing.Point(127, 20);
+            this.signatureSignPlain.Name = "signatureSignPlain";
+            this.signatureSignPlain.Size = new System.Drawing.Size(577, 20);
+            this.signatureSignPlain.TabIndex = 3;
             // 
-            // signatureVerifySignatureFile
+            // label23
             // 
-            this.signatureVerifySignatureFile.Location = new System.Drawing.Point(127, 20);
-            this.signatureVerifySignatureFile.Name = "signatureVerifySignatureFile";
-            this.signatureVerifySignatureFile.Size = new System.Drawing.Size(343, 20);
-            this.signatureVerifySignatureFile.TabIndex = 2;
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(7, 83);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(98, 13);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Digital signature file";
             // 
-            // signatureVerifyPublicKey
+            // label22
             // 
-            this.signatureVerifyPublicKey.Location = new System.Drawing.Point(127, 47);
-            this.signatureVerifyPublicKey.Name = "signatureVerifyPublicKey";
-            this.signatureVerifyPublicKey.Size = new System.Drawing.Size(343, 20);
-            this.signatureVerifyPublicKey.TabIndex = 3;
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(7, 48);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(112, 13);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "Sender private key file";
             // 
-            // signatureVerifySignatureBtn
+            // label21
             // 
-            this.signatureVerifySignatureBtn.Location = new System.Drawing.Point(504, 20);
-            this.signatureVerifySignatureBtn.Name = "signatureVerifySignatureBtn";
-            this.signatureVerifySignatureBtn.Size = new System.Drawing.Size(75, 23);
-            this.signatureVerifySignatureBtn.TabIndex = 4;
-            this.signatureVerifySignatureBtn.Text = "Choose file";
-            this.signatureVerifySignatureBtn.UseVisualStyleBackColor = true;
-            this.signatureVerifySignatureBtn.Click += new System.EventHandler(this.signatureVerifySignatureBtn_Click);
-            // 
-            // signatureVerifyPublicBtn
-            // 
-            this.signatureVerifyPublicBtn.Location = new System.Drawing.Point(504, 47);
-            this.signatureVerifyPublicBtn.Name = "signatureVerifyPublicBtn";
-            this.signatureVerifyPublicBtn.Size = new System.Drawing.Size(75, 23);
-            this.signatureVerifyPublicBtn.TabIndex = 5;
-            this.signatureVerifyPublicBtn.Text = "Choose file";
-            this.signatureVerifyPublicBtn.UseVisualStyleBackColor = true;
-            this.signatureVerifyPublicBtn.Click += new System.EventHandler(this.signatureVerifyPublicBtn_Click);
-            // 
-            // signatureVerifyBtn
-            // 
-            this.signatureVerifyBtn.Location = new System.Drawing.Point(277, 87);
-            this.signatureVerifyBtn.Name = "signatureVerifyBtn";
-            this.signatureVerifyBtn.Size = new System.Drawing.Size(75, 23);
-            this.signatureVerifyBtn.TabIndex = 6;
-            this.signatureVerifyBtn.Text = "Verify";
-            this.signatureVerifyBtn.UseVisualStyleBackColor = true;
-            this.signatureVerifyBtn.Click += new System.EventHandler(this.signatureVerifyBtn_Click);
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(7, 20);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(66, 13);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Plain text file";
             // 
             // signedEnvelopeTab
             // 
@@ -1199,6 +1199,131 @@
             this.signedEnvelopeTab.TabIndex = 5;
             this.signedEnvelopeTab.Text = "Signed envelope";
             this.signedEnvelopeTab.UseVisualStyleBackColor = true;
+            // 
+            // signedEnvelopeOpenBox
+            // 
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenBtn);
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenSenderPublicBtn);
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenReceiverPrivateBtn);
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenEnvelopeBtn);
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenPlain);
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenSenderPublic);
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenReceiverPrivate);
+            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenEnvelope);
+            this.signedEnvelopeOpenBox.Controls.Add(this.label33);
+            this.signedEnvelopeOpenBox.Controls.Add(this.label32);
+            this.signedEnvelopeOpenBox.Controls.Add(this.label31);
+            this.signedEnvelopeOpenBox.Controls.Add(this.label30);
+            this.signedEnvelopeOpenBox.Location = new System.Drawing.Point(19, 215);
+            this.signedEnvelopeOpenBox.Name = "signedEnvelopeOpenBox";
+            this.signedEnvelopeOpenBox.Size = new System.Drawing.Size(840, 187);
+            this.signedEnvelopeOpenBox.TabIndex = 1;
+            this.signedEnvelopeOpenBox.TabStop = false;
+            this.signedEnvelopeOpenBox.Text = "Open";
+            // 
+            // signedEnvelopeOpenBtn
+            // 
+            this.signedEnvelopeOpenBtn.Location = new System.Drawing.Point(419, 147);
+            this.signedEnvelopeOpenBtn.Name = "signedEnvelopeOpenBtn";
+            this.signedEnvelopeOpenBtn.Size = new System.Drawing.Size(75, 23);
+            this.signedEnvelopeOpenBtn.TabIndex = 22;
+            this.signedEnvelopeOpenBtn.Text = "Open";
+            this.signedEnvelopeOpenBtn.UseVisualStyleBackColor = true;
+            this.signedEnvelopeOpenBtn.Click += new System.EventHandler(this.signedEnvelopeOpenBtn_Click);
+            // 
+            // signedEnvelopeOpenSenderPublicBtn
+            // 
+            this.signedEnvelopeOpenSenderPublicBtn.Location = new System.Drawing.Point(738, 83);
+            this.signedEnvelopeOpenSenderPublicBtn.Name = "signedEnvelopeOpenSenderPublicBtn";
+            this.signedEnvelopeOpenSenderPublicBtn.Size = new System.Drawing.Size(75, 23);
+            this.signedEnvelopeOpenSenderPublicBtn.TabIndex = 21;
+            this.signedEnvelopeOpenSenderPublicBtn.Text = "Choose file";
+            this.signedEnvelopeOpenSenderPublicBtn.UseVisualStyleBackColor = true;
+            this.signedEnvelopeOpenSenderPublicBtn.Click += new System.EventHandler(this.signedEnvelopeOpenSenderPublicBtn_Click);
+            // 
+            // signedEnvelopeOpenReceiverPrivateBtn
+            // 
+            this.signedEnvelopeOpenReceiverPrivateBtn.Location = new System.Drawing.Point(738, 50);
+            this.signedEnvelopeOpenReceiverPrivateBtn.Name = "signedEnvelopeOpenReceiverPrivateBtn";
+            this.signedEnvelopeOpenReceiverPrivateBtn.Size = new System.Drawing.Size(75, 23);
+            this.signedEnvelopeOpenReceiverPrivateBtn.TabIndex = 20;
+            this.signedEnvelopeOpenReceiverPrivateBtn.Text = "Choose file";
+            this.signedEnvelopeOpenReceiverPrivateBtn.UseVisualStyleBackColor = true;
+            this.signedEnvelopeOpenReceiverPrivateBtn.Click += new System.EventHandler(this.signedEnvelopeOpenReceiverPrivateBtn_Click);
+            // 
+            // signedEnvelopeOpenEnvelopeBtn
+            // 
+            this.signedEnvelopeOpenEnvelopeBtn.Location = new System.Drawing.Point(738, 19);
+            this.signedEnvelopeOpenEnvelopeBtn.Name = "signedEnvelopeOpenEnvelopeBtn";
+            this.signedEnvelopeOpenEnvelopeBtn.Size = new System.Drawing.Size(75, 23);
+            this.signedEnvelopeOpenEnvelopeBtn.TabIndex = 19;
+            this.signedEnvelopeOpenEnvelopeBtn.Text = "Choose file";
+            this.signedEnvelopeOpenEnvelopeBtn.UseVisualStyleBackColor = true;
+            this.signedEnvelopeOpenEnvelopeBtn.Click += new System.EventHandler(this.signedEnvelopeOpenEnvelopeBtn_Click);
+            // 
+            // signedEnvelopeOpenPlain
+            // 
+            this.signedEnvelopeOpenPlain.Location = new System.Drawing.Point(142, 117);
+            this.signedEnvelopeOpenPlain.Name = "signedEnvelopeOpenPlain";
+            this.signedEnvelopeOpenPlain.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeOpenPlain.TabIndex = 18;
+            // 
+            // signedEnvelopeOpenSenderPublic
+            // 
+            this.signedEnvelopeOpenSenderPublic.Location = new System.Drawing.Point(142, 83);
+            this.signedEnvelopeOpenSenderPublic.Name = "signedEnvelopeOpenSenderPublic";
+            this.signedEnvelopeOpenSenderPublic.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeOpenSenderPublic.TabIndex = 17;
+            // 
+            // signedEnvelopeOpenReceiverPrivate
+            // 
+            this.signedEnvelopeOpenReceiverPrivate.Location = new System.Drawing.Point(142, 55);
+            this.signedEnvelopeOpenReceiverPrivate.Name = "signedEnvelopeOpenReceiverPrivate";
+            this.signedEnvelopeOpenReceiverPrivate.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeOpenReceiverPrivate.TabIndex = 16;
+            // 
+            // signedEnvelopeOpenEnvelope
+            // 
+            this.signedEnvelopeOpenEnvelope.Location = new System.Drawing.Point(142, 28);
+            this.signedEnvelopeOpenEnvelope.Name = "signedEnvelopeOpenEnvelope";
+            this.signedEnvelopeOpenEnvelope.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeOpenEnvelope.TabIndex = 15;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(16, 83);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(92, 13);
+            this.label33.TabIndex = 14;
+            this.label33.Text = "Sender public key";
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(16, 55);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(105, 13);
+            this.label32.TabIndex = 13;
+            this.label32.Text = "Receiver private key";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(16, 28);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(103, 13);
+            this.label31.TabIndex = 12;
+            this.label31.Text = "Signed envelope file";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(16, 117);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(66, 13);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Plain text file";
             // 
             // signedEnvelopeCreateBox
             // 
@@ -1221,89 +1346,15 @@
             this.signedEnvelopeCreateBox.TabStop = false;
             this.signedEnvelopeCreateBox.Text = "Create";
             // 
-            // label26
+            // signedEnvelopeCreateBtn
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(16, 20);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(66, 13);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Plain text file";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(16, 48);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(101, 13);
-            this.label27.TabIndex = 1;
-            this.label27.Text = "Receiver public key";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(16, 75);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(96, 13);
-            this.label28.TabIndex = 2;
-            this.label28.Text = "Sender private key";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(16, 106);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(103, 13);
-            this.label29.TabIndex = 3;
-            this.label29.Text = "Signed envelope file";
-            // 
-            // signedEnvelopeCreatePlain
-            // 
-            this.signedEnvelopeCreatePlain.Location = new System.Drawing.Point(142, 20);
-            this.signedEnvelopeCreatePlain.Name = "signedEnvelopeCreatePlain";
-            this.signedEnvelopeCreatePlain.Size = new System.Drawing.Size(576, 20);
-            this.signedEnvelopeCreatePlain.TabIndex = 4;
-            // 
-            // signedEnvelopeCreateReceiverPublic
-            // 
-            this.signedEnvelopeCreateReceiverPublic.Location = new System.Drawing.Point(142, 48);
-            this.signedEnvelopeCreateReceiverPublic.Name = "signedEnvelopeCreateReceiverPublic";
-            this.signedEnvelopeCreateReceiverPublic.Size = new System.Drawing.Size(576, 20);
-            this.signedEnvelopeCreateReceiverPublic.TabIndex = 5;
-            // 
-            // signedEnvelopeCreateSenderPrivate
-            // 
-            this.signedEnvelopeCreateSenderPrivate.Location = new System.Drawing.Point(142, 75);
-            this.signedEnvelopeCreateSenderPrivate.Name = "signedEnvelopeCreateSenderPrivate";
-            this.signedEnvelopeCreateSenderPrivate.Size = new System.Drawing.Size(576, 20);
-            this.signedEnvelopeCreateSenderPrivate.TabIndex = 6;
-            // 
-            // signedEnvelopeCreateEnvelope
-            // 
-            this.signedEnvelopeCreateEnvelope.Location = new System.Drawing.Point(142, 106);
-            this.signedEnvelopeCreateEnvelope.Name = "signedEnvelopeCreateEnvelope";
-            this.signedEnvelopeCreateEnvelope.Size = new System.Drawing.Size(576, 20);
-            this.signedEnvelopeCreateEnvelope.TabIndex = 7;
-            // 
-            // signedEnvelopeCreatePlainBtn
-            // 
-            this.signedEnvelopeCreatePlainBtn.Location = new System.Drawing.Point(738, 18);
-            this.signedEnvelopeCreatePlainBtn.Name = "signedEnvelopeCreatePlainBtn";
-            this.signedEnvelopeCreatePlainBtn.Size = new System.Drawing.Size(75, 23);
-            this.signedEnvelopeCreatePlainBtn.TabIndex = 8;
-            this.signedEnvelopeCreatePlainBtn.Text = "Choose file";
-            this.signedEnvelopeCreatePlainBtn.UseVisualStyleBackColor = true;
-            this.signedEnvelopeCreatePlainBtn.Click += new System.EventHandler(this.signedEnvelopeCreatePlainBtn_Click);
-            // 
-            // signedEnvelopeCreateReceiverPublicBtn
-            // 
-            this.signedEnvelopeCreateReceiverPublicBtn.Location = new System.Drawing.Point(738, 48);
-            this.signedEnvelopeCreateReceiverPublicBtn.Name = "signedEnvelopeCreateReceiverPublicBtn";
-            this.signedEnvelopeCreateReceiverPublicBtn.Size = new System.Drawing.Size(75, 23);
-            this.signedEnvelopeCreateReceiverPublicBtn.TabIndex = 9;
-            this.signedEnvelopeCreateReceiverPublicBtn.Text = "Choose file";
-            this.signedEnvelopeCreateReceiverPublicBtn.UseVisualStyleBackColor = true;
-            this.signedEnvelopeCreateReceiverPublicBtn.Click += new System.EventHandler(this.signedEnvelopeCreateReceiverPublicBtn_Click);
+            this.signedEnvelopeCreateBtn.Location = new System.Drawing.Point(419, 132);
+            this.signedEnvelopeCreateBtn.Name = "signedEnvelopeCreateBtn";
+            this.signedEnvelopeCreateBtn.Size = new System.Drawing.Size(75, 23);
+            this.signedEnvelopeCreateBtn.TabIndex = 11;
+            this.signedEnvelopeCreateBtn.Text = "Create";
+            this.signedEnvelopeCreateBtn.UseVisualStyleBackColor = true;
+            this.signedEnvelopeCreateBtn.Click += new System.EventHandler(this.signedEnvelopeCreateBtn_Click);
             // 
             // signedEnvelopeCreateSenderPrivateBtn
             // 
@@ -1315,140 +1366,89 @@
             this.signedEnvelopeCreateSenderPrivateBtn.UseVisualStyleBackColor = true;
             this.signedEnvelopeCreateSenderPrivateBtn.Click += new System.EventHandler(this.signedEnvelopeCreateSenderPrivateBtn_Click);
             // 
-            // signedEnvelopeCreateBtn
+            // signedEnvelopeCreateReceiverPublicBtn
             // 
-            this.signedEnvelopeCreateBtn.Location = new System.Drawing.Point(419, 132);
-            this.signedEnvelopeCreateBtn.Name = "signedEnvelopeCreateBtn";
-            this.signedEnvelopeCreateBtn.Size = new System.Drawing.Size(75, 23);
-            this.signedEnvelopeCreateBtn.TabIndex = 11;
-            this.signedEnvelopeCreateBtn.Text = "Create";
-            this.signedEnvelopeCreateBtn.UseVisualStyleBackColor = true;
-            this.signedEnvelopeCreateBtn.Click += new System.EventHandler(this.signedEnvelopeCreateBtn_Click);
+            this.signedEnvelopeCreateReceiverPublicBtn.Location = new System.Drawing.Point(738, 48);
+            this.signedEnvelopeCreateReceiverPublicBtn.Name = "signedEnvelopeCreateReceiverPublicBtn";
+            this.signedEnvelopeCreateReceiverPublicBtn.Size = new System.Drawing.Size(75, 23);
+            this.signedEnvelopeCreateReceiverPublicBtn.TabIndex = 9;
+            this.signedEnvelopeCreateReceiverPublicBtn.Text = "Choose file";
+            this.signedEnvelopeCreateReceiverPublicBtn.UseVisualStyleBackColor = true;
+            this.signedEnvelopeCreateReceiverPublicBtn.Click += new System.EventHandler(this.signedEnvelopeCreateReceiverPublicBtn_Click);
             // 
-            // signedEnvelopeOpenBox
+            // signedEnvelopeCreatePlainBtn
             // 
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenBtn);
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenSenderPublicBtn);
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenReceiverPrivateBtn);
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenEnvelopeBtn);
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenPlain);
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenSenderPublic);
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenReceiverPrivate);
-            this.signedEnvelopeOpenBox.Controls.Add(this.signedEnvelopeOpenEnvelope);
-            this.signedEnvelopeOpenBox.Controls.Add(this.label33);
-            this.signedEnvelopeOpenBox.Controls.Add(this.label32);
-            this.signedEnvelopeOpenBox.Controls.Add(this.label31);
-            this.signedEnvelopeOpenBox.Controls.Add(this.label30);
-            this.signedEnvelopeOpenBox.Location = new System.Drawing.Point(19, 215);
-            this.signedEnvelopeOpenBox.Name = "signedEnvelopeOpenBox";
-            this.signedEnvelopeOpenBox.Size = new System.Drawing.Size(575, 187);
-            this.signedEnvelopeOpenBox.TabIndex = 1;
-            this.signedEnvelopeOpenBox.TabStop = false;
-            this.signedEnvelopeOpenBox.Text = "Open";
+            this.signedEnvelopeCreatePlainBtn.Location = new System.Drawing.Point(738, 18);
+            this.signedEnvelopeCreatePlainBtn.Name = "signedEnvelopeCreatePlainBtn";
+            this.signedEnvelopeCreatePlainBtn.Size = new System.Drawing.Size(75, 23);
+            this.signedEnvelopeCreatePlainBtn.TabIndex = 8;
+            this.signedEnvelopeCreatePlainBtn.Text = "Choose file";
+            this.signedEnvelopeCreatePlainBtn.UseVisualStyleBackColor = true;
+            this.signedEnvelopeCreatePlainBtn.Click += new System.EventHandler(this.signedEnvelopeCreatePlainBtn_Click);
             // 
-            // label30
+            // signedEnvelopeCreateEnvelope
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(16, 117);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(66, 13);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "Plain text file";
+            this.signedEnvelopeCreateEnvelope.Location = new System.Drawing.Point(142, 106);
+            this.signedEnvelopeCreateEnvelope.Name = "signedEnvelopeCreateEnvelope";
+            this.signedEnvelopeCreateEnvelope.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeCreateEnvelope.TabIndex = 7;
             // 
-            // label31
+            // signedEnvelopeCreateSenderPrivate
             // 
-            this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(16, 28);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(103, 13);
-            this.label31.TabIndex = 12;
-            this.label31.Text = "Signed envelope file";
+            this.signedEnvelopeCreateSenderPrivate.Location = new System.Drawing.Point(142, 75);
+            this.signedEnvelopeCreateSenderPrivate.Name = "signedEnvelopeCreateSenderPrivate";
+            this.signedEnvelopeCreateSenderPrivate.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeCreateSenderPrivate.TabIndex = 6;
             // 
-            // label32
+            // signedEnvelopeCreateReceiverPublic
             // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(16, 55);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(105, 13);
-            this.label32.TabIndex = 13;
-            this.label32.Text = "Receiver private key";
+            this.signedEnvelopeCreateReceiverPublic.Location = new System.Drawing.Point(142, 48);
+            this.signedEnvelopeCreateReceiverPublic.Name = "signedEnvelopeCreateReceiverPublic";
+            this.signedEnvelopeCreateReceiverPublic.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeCreateReceiverPublic.TabIndex = 5;
             // 
-            // label33
+            // signedEnvelopeCreatePlain
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(16, 83);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(92, 13);
-            this.label33.TabIndex = 14;
-            this.label33.Text = "Sender public key";
+            this.signedEnvelopeCreatePlain.Location = new System.Drawing.Point(142, 20);
+            this.signedEnvelopeCreatePlain.Name = "signedEnvelopeCreatePlain";
+            this.signedEnvelopeCreatePlain.Size = new System.Drawing.Size(576, 20);
+            this.signedEnvelopeCreatePlain.TabIndex = 4;
             // 
-            // signedEnvelopeOpenEnvelope
+            // label29
             // 
-            this.signedEnvelopeOpenEnvelope.Location = new System.Drawing.Point(142, 28);
-            this.signedEnvelopeOpenEnvelope.Name = "signedEnvelopeOpenEnvelope";
-            this.signedEnvelopeOpenEnvelope.Size = new System.Drawing.Size(100, 20);
-            this.signedEnvelopeOpenEnvelope.TabIndex = 15;
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(16, 106);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(103, 13);
+            this.label29.TabIndex = 3;
+            this.label29.Text = "Signed envelope file";
             // 
-            // signedEnvelopeOpenReceiverPrivate
+            // label28
             // 
-            this.signedEnvelopeOpenReceiverPrivate.Location = new System.Drawing.Point(142, 55);
-            this.signedEnvelopeOpenReceiverPrivate.Name = "signedEnvelopeOpenReceiverPrivate";
-            this.signedEnvelopeOpenReceiverPrivate.Size = new System.Drawing.Size(100, 20);
-            this.signedEnvelopeOpenReceiverPrivate.TabIndex = 16;
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(16, 75);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(96, 13);
+            this.label28.TabIndex = 2;
+            this.label28.Text = "Sender private key";
             // 
-            // signedEnvelopeOpenSenderPublic
+            // label27
             // 
-            this.signedEnvelopeOpenSenderPublic.Location = new System.Drawing.Point(142, 83);
-            this.signedEnvelopeOpenSenderPublic.Name = "signedEnvelopeOpenSenderPublic";
-            this.signedEnvelopeOpenSenderPublic.Size = new System.Drawing.Size(100, 20);
-            this.signedEnvelopeOpenSenderPublic.TabIndex = 17;
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(16, 48);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(101, 13);
+            this.label27.TabIndex = 1;
+            this.label27.Text = "Receiver public key";
             // 
-            // signedEnvelopeOpenPlain
+            // label26
             // 
-            this.signedEnvelopeOpenPlain.Location = new System.Drawing.Point(142, 117);
-            this.signedEnvelopeOpenPlain.Name = "signedEnvelopeOpenPlain";
-            this.signedEnvelopeOpenPlain.Size = new System.Drawing.Size(100, 20);
-            this.signedEnvelopeOpenPlain.TabIndex = 18;
-            // 
-            // signedEnvelopeOpenEnvelopeBtn
-            // 
-            this.signedEnvelopeOpenEnvelopeBtn.Location = new System.Drawing.Point(452, 28);
-            this.signedEnvelopeOpenEnvelopeBtn.Name = "signedEnvelopeOpenEnvelopeBtn";
-            this.signedEnvelopeOpenEnvelopeBtn.Size = new System.Drawing.Size(75, 23);
-            this.signedEnvelopeOpenEnvelopeBtn.TabIndex = 19;
-            this.signedEnvelopeOpenEnvelopeBtn.Text = "Choose file";
-            this.signedEnvelopeOpenEnvelopeBtn.UseVisualStyleBackColor = true;
-            this.signedEnvelopeOpenEnvelopeBtn.Click += new System.EventHandler(this.signedEnvelopeOpenEnvelopeBtn_Click);
-            // 
-            // signedEnvelopeOpenReceiverPrivateBtn
-            // 
-            this.signedEnvelopeOpenReceiverPrivateBtn.Location = new System.Drawing.Point(452, 55);
-            this.signedEnvelopeOpenReceiverPrivateBtn.Name = "signedEnvelopeOpenReceiverPrivateBtn";
-            this.signedEnvelopeOpenReceiverPrivateBtn.Size = new System.Drawing.Size(75, 23);
-            this.signedEnvelopeOpenReceiverPrivateBtn.TabIndex = 20;
-            this.signedEnvelopeOpenReceiverPrivateBtn.Text = "Choose file";
-            this.signedEnvelopeOpenReceiverPrivateBtn.UseVisualStyleBackColor = true;
-            this.signedEnvelopeOpenReceiverPrivateBtn.Click += new System.EventHandler(this.signedEnvelopeOpenReceiverPrivateBtn_Click);
-            // 
-            // signedEnvelopeOpenSenderPublicBtn
-            // 
-            this.signedEnvelopeOpenSenderPublicBtn.Location = new System.Drawing.Point(452, 83);
-            this.signedEnvelopeOpenSenderPublicBtn.Name = "signedEnvelopeOpenSenderPublicBtn";
-            this.signedEnvelopeOpenSenderPublicBtn.Size = new System.Drawing.Size(75, 23);
-            this.signedEnvelopeOpenSenderPublicBtn.TabIndex = 21;
-            this.signedEnvelopeOpenSenderPublicBtn.Text = "Choose file";
-            this.signedEnvelopeOpenSenderPublicBtn.UseVisualStyleBackColor = true;
-            this.signedEnvelopeOpenSenderPublicBtn.Click += new System.EventHandler(this.signedEnvelopeOpenSenderPublicBtn_Click);
-            // 
-            // signedEnvelopeOpenBtn
-            // 
-            this.signedEnvelopeOpenBtn.Location = new System.Drawing.Point(250, 153);
-            this.signedEnvelopeOpenBtn.Name = "signedEnvelopeOpenBtn";
-            this.signedEnvelopeOpenBtn.Size = new System.Drawing.Size(75, 23);
-            this.signedEnvelopeOpenBtn.TabIndex = 22;
-            this.signedEnvelopeOpenBtn.Text = "Open";
-            this.signedEnvelopeOpenBtn.UseVisualStyleBackColor = true;
-            this.signedEnvelopeOpenBtn.Click += new System.EventHandler(this.signedEnvelopeOpenBtn_Click);
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(16, 20);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(66, 13);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Plain text file";
             // 
             // MainWindow
             // 
@@ -1478,15 +1478,15 @@
             this.envelopeEncryptBox.ResumeLayout(false);
             this.envelopeEncryptBox.PerformLayout();
             this.signatureTab.ResumeLayout(false);
-            this.signatureCreateBox.ResumeLayout(false);
-            this.signatureCreateBox.PerformLayout();
             this.signatureVerifyBox.ResumeLayout(false);
             this.signatureVerifyBox.PerformLayout();
+            this.signatureCreateBox.ResumeLayout(false);
+            this.signatureCreateBox.PerformLayout();
             this.signedEnvelopeTab.ResumeLayout(false);
-            this.signedEnvelopeCreateBox.ResumeLayout(false);
-            this.signedEnvelopeCreateBox.PerformLayout();
             this.signedEnvelopeOpenBox.ResumeLayout(false);
             this.signedEnvelopeOpenBox.PerformLayout();
+            this.signedEnvelopeCreateBox.ResumeLayout(false);
+            this.signedEnvelopeCreateBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
