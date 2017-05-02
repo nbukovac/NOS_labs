@@ -172,6 +172,8 @@ namespace CryptoAlgorithms
             {
                 var keysSize = int.Parse(rsaKeysSize.Text);
                 RSA.GenerateKeys(keysSize, _initialDirectory + "RSA_private.txt", _initialDirectory + "RSA_public.txt");
+                RSA.GenerateKeys(keysSize, _initialDirectory + "RSA_sender_private.txt", 
+                    _initialDirectory + "RSA_sender_public.txt");
             }
             catch (FormatException exception)
             {
