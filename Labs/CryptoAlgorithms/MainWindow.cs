@@ -332,5 +332,88 @@ namespace CryptoAlgorithms
         }
 
         #endregion
+
+        #region Signature
+
+        private void signatureCreateSignature_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(signatureSignPlain.Text))
+            {
+                MessageBox.Show("Choose a plain text file", "Choose a plain text file", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(signatureSignPrivateKey.Text))
+            {
+                signatureSignPrivateKey.Text = _initialDirectory + "RSA_private.txt";
+            }
+            if (string.IsNullOrWhiteSpace(signatureSignSignature.Text))
+            {
+                signatureSignSignature.Text = _initialDirectory + "Signature.txt";
+            }
+
+            if (ready)
+            {
+                DigitalSignature.CreateSignature(signatureSignPlain.Text, int.Parse(rsaKeysSize.Text), 
+                    signatureSignPrivateKey.Text, signatureSignSignature.Text);
+            }
+        }
+
+        private void signatureSignPrivateBtn_Click(object sender, EventArgs e)
+        {
+            signatureSignPrivateKey.Text = GetFileName();
+        }
+
+        private void signatureSignPlainBtn_Click(object sender, EventArgs e)
+        {
+            signatureSignPlain.Text = GetFileName();
+        }
+
+        private void signatureVerifyPublicBtn_Click(object sender, EventArgs e)
+        {
+            signatureVerifyPublicKey.Text = GetFileName();
+        }
+
+        private void signatureVerifySignatureBtn_Click(object sender, EventArgs e)
+        {
+            signatureVerifySignatureFile.Text = GetFileName();
+        }
+
+        private void signatureVerifyBtn_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(signatureVerifySignatureFile.Text))
+            {
+                MessageBox.Show("Choose a signature file", "Choose a signature file", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+            if (string.IsNullOrWhiteSpace(signatureVerifyPublicKey.Text))
+            {
+                signatureVerifyPublicKey.Text = _initialDirectory + "RSA_public.txt";
+            }
+
+            if (ready)
+            {
+                var verified = DigitalSignature.VerifySignature(signatureVerifySignatureFile.Text, int.Parse(rsaKeysSize.Text),
+                    signatureVerifyPublicKey.Text);
+
+                if (verified)
+                {
+                    MessageBox.Show("Sender is verified", "Verified", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Sender is not verified", "Not verified", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                }
+            }
+        }
+
+        #endregion
+
     }
 }

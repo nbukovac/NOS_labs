@@ -86,7 +86,7 @@ namespace CryptoAlgorithms.Algorithms
 
             using (var rsa = new RSACryptoServiceProvider(keySize))
             {
-                rsa.FromXmlString(privateKeyFilePath);
+                rsa.FromXmlString(FileOperations.ReadFromTextFile(privateKeyFilePath));
                 signature = rsa.SignData(data, hashAlgorithm);
             }
 
@@ -100,7 +100,7 @@ namespace CryptoAlgorithms.Algorithms
 
             using (var rsa = new RSACryptoServiceProvider(keySize))
             {
-                rsa.FromXmlString(publicKeyFilePath);
+                rsa.FromXmlString(FileOperations.ReadFromTextFile(publicKeyFilePath));
                 verified = rsa.VerifyData(data, hashAlgorithm, signature);
             }
 

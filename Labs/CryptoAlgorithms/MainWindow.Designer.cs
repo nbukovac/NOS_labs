@@ -66,61 +66,83 @@
             this.sha1PlainFile = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.rsaTab = new System.Windows.Forms.TabPage();
-            this.rsaGenerateKeysBtn = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.rsaKeysSize = new System.Windows.Forms.TextBox();
-            this.rsaEncryptBox = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.rsaEncryptPlainFile = new System.Windows.Forms.TextBox();
-            this.rsaEncryptPublicKey = new System.Windows.Forms.TextBox();
-            this.rsaEncryptCipherFile = new System.Windows.Forms.TextBox();
-            this.rsaEncryptPlainBtn = new System.Windows.Forms.Button();
-            this.rsaEncryptPublicBtn = new System.Windows.Forms.Button();
-            this.rsaStartEncrypt = new System.Windows.Forms.Button();
             this.rsaDecryptBox = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.rsaDecryptCipherFile = new System.Windows.Forms.TextBox();
-            this.rsaDecryptPrivateKeyFile = new System.Windows.Forms.TextBox();
-            this.rsaDecryptPlainFile = new System.Windows.Forms.TextBox();
-            this.rsaDecryptCipherBtn = new System.Windows.Forms.Button();
-            this.rsaDecryptPrivateBtn = new System.Windows.Forms.Button();
             this.rsaStartDecrypt = new System.Windows.Forms.Button();
+            this.rsaDecryptPrivateBtn = new System.Windows.Forms.Button();
+            this.rsaDecryptCipherBtn = new System.Windows.Forms.Button();
+            this.rsaDecryptPlainFile = new System.Windows.Forms.TextBox();
+            this.rsaDecryptPrivateKeyFile = new System.Windows.Forms.TextBox();
+            this.rsaDecryptCipherFile = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.rsaEncryptBox = new System.Windows.Forms.GroupBox();
+            this.rsaStartEncrypt = new System.Windows.Forms.Button();
+            this.rsaEncryptPublicBtn = new System.Windows.Forms.Button();
+            this.rsaEncryptPlainBtn = new System.Windows.Forms.Button();
+            this.rsaEncryptCipherFile = new System.Windows.Forms.TextBox();
+            this.rsaEncryptPublicKey = new System.Windows.Forms.TextBox();
+            this.rsaEncryptPlainFile = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.rsaKeysSize = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rsaGenerateKeysBtn = new System.Windows.Forms.Button();
             this.envelopeTab = new System.Windows.Forms.TabPage();
-            this.envelopeEncryptBox = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.envelopeEncryptPlain = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.envelopeEncryptPublic = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.envelopeEncryptEnvelope = new System.Windows.Forms.TextBox();
-            this.envelopeEncryptPlainBtn = new System.Windows.Forms.Button();
-            this.envelopeEncryptPublicBtn = new System.Windows.Forms.Button();
-            this.envelopeEncryptStart = new System.Windows.Forms.Button();
             this.envelopeDecryptBox = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.envelopeDecryptEnvelope = new System.Windows.Forms.TextBox();
-            this.envelopeDecryptPrivate = new System.Windows.Forms.TextBox();
-            this.envelopeDecryptPlain = new System.Windows.Forms.TextBox();
-            this.envelopeDecryptEnvelopeBtn = new System.Windows.Forms.Button();
-            this.envelopeDecryptprivateBtn = new System.Windows.Forms.Button();
             this.envelopeDecryptStartBtn = new System.Windows.Forms.Button();
+            this.envelopeDecryptprivateBtn = new System.Windows.Forms.Button();
+            this.envelopeDecryptEnvelopeBtn = new System.Windows.Forms.Button();
+            this.envelopeDecryptPlain = new System.Windows.Forms.TextBox();
+            this.envelopeDecryptPrivate = new System.Windows.Forms.TextBox();
+            this.envelopeDecryptEnvelope = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.envelopeEncryptBox = new System.Windows.Forms.GroupBox();
+            this.envelopeEncryptStart = new System.Windows.Forms.Button();
+            this.envelopeEncryptPublicBtn = new System.Windows.Forms.Button();
+            this.envelopeEncryptPlainBtn = new System.Windows.Forms.Button();
+            this.envelopeEncryptEnvelope = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.envelopeEncryptPublic = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.envelopeEncryptPlain = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.signatureTab = new System.Windows.Forms.TabPage();
+            this.signatureCreateBox = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.signatureSignPlain = new System.Windows.Forms.TextBox();
+            this.signatureSignPrivateKey = new System.Windows.Forms.TextBox();
+            this.signatureSignSignature = new System.Windows.Forms.TextBox();
+            this.signatureSignPlainBtn = new System.Windows.Forms.Button();
+            this.signatureSignPrivateBtn = new System.Windows.Forms.Button();
+            this.signatureCreateSignature = new System.Windows.Forms.Button();
+            this.signatureVerifyBox = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.signatureVerifySignatureFile = new System.Windows.Forms.TextBox();
+            this.signatureVerifyPublicKey = new System.Windows.Forms.TextBox();
+            this.signatureVerifySignatureBtn = new System.Windows.Forms.Button();
+            this.signatureVerifyPublicBtn = new System.Windows.Forms.Button();
+            this.signatureVerifyBtn = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesDecryptGroup.SuspendLayout();
             this.aesEncryptGroup.SuspendLayout();
             this.sha1Tab.SuspendLayout();
             this.rsaTab.SuspendLayout();
-            this.rsaEncryptBox.SuspendLayout();
             this.rsaDecryptBox.SuspendLayout();
+            this.rsaEncryptBox.SuspendLayout();
             this.envelopeTab.SuspendLayout();
-            this.envelopeEncryptBox.SuspendLayout();
             this.envelopeDecryptBox.SuspendLayout();
+            this.envelopeEncryptBox.SuspendLayout();
+            this.signatureTab.SuspendLayout();
+            this.signatureCreateBox.SuspendLayout();
+            this.signatureVerifyBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -132,6 +154,7 @@
             this.tabControl.Controls.Add(this.sha1Tab);
             this.tabControl.Controls.Add(this.rsaTab);
             this.tabControl.Controls.Add(this.envelopeTab);
+            this.tabControl.Controls.Add(this.signatureTab);
             this.tabControl.Location = new System.Drawing.Point(3, 12);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -522,32 +545,101 @@
             this.rsaTab.Text = "RSA";
             this.rsaTab.UseVisualStyleBackColor = true;
             // 
-            // rsaGenerateKeysBtn
+            // rsaDecryptBox
             // 
-            this.rsaGenerateKeysBtn.Location = new System.Drawing.Point(359, 22);
-            this.rsaGenerateKeysBtn.Name = "rsaGenerateKeysBtn";
-            this.rsaGenerateKeysBtn.Size = new System.Drawing.Size(115, 23);
-            this.rsaGenerateKeysBtn.TabIndex = 0;
-            this.rsaGenerateKeysBtn.Text = "Generate keys";
-            this.rsaGenerateKeysBtn.UseVisualStyleBackColor = true;
-            this.rsaGenerateKeysBtn.Click += new System.EventHandler(this.rsaGenerateKeysBtn_Click);
+            this.rsaDecryptBox.Controls.Add(this.rsaStartDecrypt);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPrivateBtn);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptCipherBtn);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPlainFile);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPrivateKeyFile);
+            this.rsaDecryptBox.Controls.Add(this.rsaDecryptCipherFile);
+            this.rsaDecryptBox.Controls.Add(this.label14);
+            this.rsaDecryptBox.Controls.Add(this.label13);
+            this.rsaDecryptBox.Controls.Add(this.label12);
+            this.rsaDecryptBox.Location = new System.Drawing.Point(21, 233);
+            this.rsaDecryptBox.Name = "rsaDecryptBox";
+            this.rsaDecryptBox.Size = new System.Drawing.Size(838, 203);
+            this.rsaDecryptBox.TabIndex = 4;
+            this.rsaDecryptBox.TabStop = false;
+            this.rsaDecryptBox.Text = "Decrypt";
             // 
-            // label8
+            // rsaStartDecrypt
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Keys size";
+            this.rsaStartDecrypt.Location = new System.Drawing.Point(378, 143);
+            this.rsaStartDecrypt.Name = "rsaStartDecrypt";
+            this.rsaStartDecrypt.Size = new System.Drawing.Size(75, 23);
+            this.rsaStartDecrypt.TabIndex = 8;
+            this.rsaStartDecrypt.Text = "Decrypt";
+            this.rsaStartDecrypt.UseVisualStyleBackColor = true;
+            this.rsaStartDecrypt.Click += new System.EventHandler(this.rsaStartDecrypt_Click);
             // 
-            // rsaKeysSize
+            // rsaDecryptPrivateBtn
             // 
-            this.rsaKeysSize.Location = new System.Drawing.Point(88, 27);
-            this.rsaKeysSize.Name = "rsaKeysSize";
-            this.rsaKeysSize.Size = new System.Drawing.Size(120, 20);
-            this.rsaKeysSize.TabIndex = 2;
-            this.rsaKeysSize.Text = "1024";
+            this.rsaDecryptPrivateBtn.Location = new System.Drawing.Point(654, 67);
+            this.rsaDecryptPrivateBtn.Name = "rsaDecryptPrivateBtn";
+            this.rsaDecryptPrivateBtn.Size = new System.Drawing.Size(75, 23);
+            this.rsaDecryptPrivateBtn.TabIndex = 7;
+            this.rsaDecryptPrivateBtn.Text = "Choose file";
+            this.rsaDecryptPrivateBtn.UseVisualStyleBackColor = true;
+            this.rsaDecryptPrivateBtn.Click += new System.EventHandler(this.rsaDecryptPrivateBtn_Click);
+            // 
+            // rsaDecryptCipherBtn
+            // 
+            this.rsaDecryptCipherBtn.Location = new System.Drawing.Point(654, 28);
+            this.rsaDecryptCipherBtn.Name = "rsaDecryptCipherBtn";
+            this.rsaDecryptCipherBtn.Size = new System.Drawing.Size(75, 23);
+            this.rsaDecryptCipherBtn.TabIndex = 6;
+            this.rsaDecryptCipherBtn.Text = "Choose file";
+            this.rsaDecryptCipherBtn.UseVisualStyleBackColor = true;
+            this.rsaDecryptCipherBtn.Click += new System.EventHandler(this.rsaDecryptCipherBtn_Click);
+            // 
+            // rsaDecryptPlainFile
+            // 
+            this.rsaDecryptPlainFile.Location = new System.Drawing.Point(104, 94);
+            this.rsaDecryptPlainFile.Name = "rsaDecryptPlainFile";
+            this.rsaDecryptPlainFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaDecryptPlainFile.TabIndex = 5;
+            // 
+            // rsaDecryptPrivateKeyFile
+            // 
+            this.rsaDecryptPrivateKeyFile.Location = new System.Drawing.Point(104, 67);
+            this.rsaDecryptPrivateKeyFile.Name = "rsaDecryptPrivateKeyFile";
+            this.rsaDecryptPrivateKeyFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaDecryptPrivateKeyFile.TabIndex = 4;
+            // 
+            // rsaDecryptCipherFile
+            // 
+            this.rsaDecryptCipherFile.Location = new System.Drawing.Point(104, 33);
+            this.rsaDecryptCipherFile.Name = "rsaDecryptCipherFile";
+            this.rsaDecryptCipherFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaDecryptCipherFile.TabIndex = 3;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(13, 102);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(66, 13);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Plain text file";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(10, 67);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(76, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Private key file";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(10, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(73, 13);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Cipher file text";
             // 
             // rsaEncryptBox
             // 
@@ -570,63 +662,15 @@
             this.rsaEncryptBox.TabStop = false;
             this.rsaEncryptBox.Text = "Encrypt";
             // 
-            // label9
+            // rsaStartEncrypt
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(7, 20);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Plain text file";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(7, 55);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(72, 13);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Public key file";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(7, 89);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 13);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "Cipher text file";
-            // 
-            // rsaEncryptPlainFile
-            // 
-            this.rsaEncryptPlainFile.Location = new System.Drawing.Point(104, 17);
-            this.rsaEncryptPlainFile.Name = "rsaEncryptPlainFile";
-            this.rsaEncryptPlainFile.Size = new System.Drawing.Size(501, 20);
-            this.rsaEncryptPlainFile.TabIndex = 3;
-            // 
-            // rsaEncryptPublicKey
-            // 
-            this.rsaEncryptPublicKey.Location = new System.Drawing.Point(104, 48);
-            this.rsaEncryptPublicKey.Name = "rsaEncryptPublicKey";
-            this.rsaEncryptPublicKey.Size = new System.Drawing.Size(501, 20);
-            this.rsaEncryptPublicKey.TabIndex = 4;
-            // 
-            // rsaEncryptCipherFile
-            // 
-            this.rsaEncryptCipherFile.Location = new System.Drawing.Point(104, 82);
-            this.rsaEncryptCipherFile.Name = "rsaEncryptCipherFile";
-            this.rsaEncryptCipherFile.Size = new System.Drawing.Size(501, 20);
-            this.rsaEncryptCipherFile.TabIndex = 5;
-            // 
-            // rsaEncryptPlainBtn
-            // 
-            this.rsaEncryptPlainBtn.Location = new System.Drawing.Point(654, 14);
-            this.rsaEncryptPlainBtn.Name = "rsaEncryptPlainBtn";
-            this.rsaEncryptPlainBtn.Size = new System.Drawing.Size(75, 23);
-            this.rsaEncryptPlainBtn.TabIndex = 6;
-            this.rsaEncryptPlainBtn.Text = "Choose file";
-            this.rsaEncryptPlainBtn.UseVisualStyleBackColor = true;
-            this.rsaEncryptPlainBtn.Click += new System.EventHandler(this.rsaEncryptPlainBtn_Click);
+            this.rsaStartEncrypt.Location = new System.Drawing.Point(378, 121);
+            this.rsaStartEncrypt.Name = "rsaStartEncrypt";
+            this.rsaStartEncrypt.Size = new System.Drawing.Size(75, 23);
+            this.rsaStartEncrypt.TabIndex = 8;
+            this.rsaStartEncrypt.Text = "Encrypt";
+            this.rsaStartEncrypt.UseVisualStyleBackColor = true;
+            this.rsaStartEncrypt.Click += new System.EventHandler(this.rsaStartEncrypt_Click);
             // 
             // rsaEncryptPublicBtn
             // 
@@ -638,111 +682,90 @@
             this.rsaEncryptPublicBtn.UseVisualStyleBackColor = true;
             this.rsaEncryptPublicBtn.Click += new System.EventHandler(this.rsaEncryptPublicBtn_Click);
             // 
-            // rsaStartEncrypt
+            // rsaEncryptPlainBtn
             // 
-            this.rsaStartEncrypt.Location = new System.Drawing.Point(378, 121);
-            this.rsaStartEncrypt.Name = "rsaStartEncrypt";
-            this.rsaStartEncrypt.Size = new System.Drawing.Size(75, 23);
-            this.rsaStartEncrypt.TabIndex = 8;
-            this.rsaStartEncrypt.Text = "Encrypt";
-            this.rsaStartEncrypt.UseVisualStyleBackColor = true;
-            this.rsaStartEncrypt.Click += new System.EventHandler(this.rsaStartEncrypt_Click);
+            this.rsaEncryptPlainBtn.Location = new System.Drawing.Point(654, 14);
+            this.rsaEncryptPlainBtn.Name = "rsaEncryptPlainBtn";
+            this.rsaEncryptPlainBtn.Size = new System.Drawing.Size(75, 23);
+            this.rsaEncryptPlainBtn.TabIndex = 6;
+            this.rsaEncryptPlainBtn.Text = "Choose file";
+            this.rsaEncryptPlainBtn.UseVisualStyleBackColor = true;
+            this.rsaEncryptPlainBtn.Click += new System.EventHandler(this.rsaEncryptPlainBtn_Click);
             // 
-            // rsaDecryptBox
+            // rsaEncryptCipherFile
             // 
-            this.rsaDecryptBox.Controls.Add(this.rsaStartDecrypt);
-            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPrivateBtn);
-            this.rsaDecryptBox.Controls.Add(this.rsaDecryptCipherBtn);
-            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPlainFile);
-            this.rsaDecryptBox.Controls.Add(this.rsaDecryptPrivateKeyFile);
-            this.rsaDecryptBox.Controls.Add(this.rsaDecryptCipherFile);
-            this.rsaDecryptBox.Controls.Add(this.label14);
-            this.rsaDecryptBox.Controls.Add(this.label13);
-            this.rsaDecryptBox.Controls.Add(this.label12);
-            this.rsaDecryptBox.Location = new System.Drawing.Point(21, 233);
-            this.rsaDecryptBox.Name = "rsaDecryptBox";
-            this.rsaDecryptBox.Size = new System.Drawing.Size(838, 203);
-            this.rsaDecryptBox.TabIndex = 4;
-            this.rsaDecryptBox.TabStop = false;
-            this.rsaDecryptBox.Text = "Decrypt";
+            this.rsaEncryptCipherFile.Location = new System.Drawing.Point(104, 82);
+            this.rsaEncryptCipherFile.Name = "rsaEncryptCipherFile";
+            this.rsaEncryptCipherFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaEncryptCipherFile.TabIndex = 5;
             // 
-            // label12
+            // rsaEncryptPublicKey
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(10, 33);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 13);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Cipher file text";
+            this.rsaEncryptPublicKey.Location = new System.Drawing.Point(104, 48);
+            this.rsaEncryptPublicKey.Name = "rsaEncryptPublicKey";
+            this.rsaEncryptPublicKey.Size = new System.Drawing.Size(501, 20);
+            this.rsaEncryptPublicKey.TabIndex = 4;
             // 
-            // label13
+            // rsaEncryptPlainFile
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(10, 67);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 13);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Private key file";
+            this.rsaEncryptPlainFile.Location = new System.Drawing.Point(104, 17);
+            this.rsaEncryptPlainFile.Name = "rsaEncryptPlainFile";
+            this.rsaEncryptPlainFile.Size = new System.Drawing.Size(501, 20);
+            this.rsaEncryptPlainFile.TabIndex = 3;
             // 
-            // label14
+            // label11
             // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(13, 102);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(66, 13);
-            this.label14.TabIndex = 2;
-            this.label14.Text = "Plain text file";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(7, 89);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 13);
+            this.label11.TabIndex = 2;
+            this.label11.Text = "Cipher text file";
             // 
-            // rsaDecryptCipherFile
+            // label10
             // 
-            this.rsaDecryptCipherFile.Location = new System.Drawing.Point(104, 33);
-            this.rsaDecryptCipherFile.Name = "rsaDecryptCipherFile";
-            this.rsaDecryptCipherFile.Size = new System.Drawing.Size(501, 20);
-            this.rsaDecryptCipherFile.TabIndex = 3;
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(7, 55);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(72, 13);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Public key file";
             // 
-            // rsaDecryptPrivateKeyFile
+            // label9
             // 
-            this.rsaDecryptPrivateKeyFile.Location = new System.Drawing.Point(104, 67);
-            this.rsaDecryptPrivateKeyFile.Name = "rsaDecryptPrivateKeyFile";
-            this.rsaDecryptPrivateKeyFile.Size = new System.Drawing.Size(501, 20);
-            this.rsaDecryptPrivateKeyFile.TabIndex = 4;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Plain text file";
             // 
-            // rsaDecryptPlainFile
+            // rsaKeysSize
             // 
-            this.rsaDecryptPlainFile.Location = new System.Drawing.Point(104, 94);
-            this.rsaDecryptPlainFile.Name = "rsaDecryptPlainFile";
-            this.rsaDecryptPlainFile.Size = new System.Drawing.Size(501, 20);
-            this.rsaDecryptPlainFile.TabIndex = 5;
+            this.rsaKeysSize.Location = new System.Drawing.Point(88, 27);
+            this.rsaKeysSize.Name = "rsaKeysSize";
+            this.rsaKeysSize.Size = new System.Drawing.Size(120, 20);
+            this.rsaKeysSize.TabIndex = 2;
+            this.rsaKeysSize.Text = "1024";
             // 
-            // rsaDecryptCipherBtn
+            // label8
             // 
-            this.rsaDecryptCipherBtn.Location = new System.Drawing.Point(654, 28);
-            this.rsaDecryptCipherBtn.Name = "rsaDecryptCipherBtn";
-            this.rsaDecryptCipherBtn.Size = new System.Drawing.Size(75, 23);
-            this.rsaDecryptCipherBtn.TabIndex = 6;
-            this.rsaDecryptCipherBtn.Text = "Choose file";
-            this.rsaDecryptCipherBtn.UseVisualStyleBackColor = true;
-            this.rsaDecryptCipherBtn.Click += new System.EventHandler(this.rsaDecryptCipherBtn_Click);
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(18, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Keys size";
             // 
-            // rsaDecryptPrivateBtn
+            // rsaGenerateKeysBtn
             // 
-            this.rsaDecryptPrivateBtn.Location = new System.Drawing.Point(654, 67);
-            this.rsaDecryptPrivateBtn.Name = "rsaDecryptPrivateBtn";
-            this.rsaDecryptPrivateBtn.Size = new System.Drawing.Size(75, 23);
-            this.rsaDecryptPrivateBtn.TabIndex = 7;
-            this.rsaDecryptPrivateBtn.Text = "Choose file";
-            this.rsaDecryptPrivateBtn.UseVisualStyleBackColor = true;
-            this.rsaDecryptPrivateBtn.Click += new System.EventHandler(this.rsaDecryptPrivateBtn_Click);
-            // 
-            // rsaStartDecrypt
-            // 
-            this.rsaStartDecrypt.Location = new System.Drawing.Point(378, 143);
-            this.rsaStartDecrypt.Name = "rsaStartDecrypt";
-            this.rsaStartDecrypt.Size = new System.Drawing.Size(75, 23);
-            this.rsaStartDecrypt.TabIndex = 8;
-            this.rsaStartDecrypt.Text = "Decrypt";
-            this.rsaStartDecrypt.UseVisualStyleBackColor = true;
-            this.rsaStartDecrypt.Click += new System.EventHandler(this.rsaStartDecrypt_Click);
+            this.rsaGenerateKeysBtn.Location = new System.Drawing.Point(359, 22);
+            this.rsaGenerateKeysBtn.Name = "rsaGenerateKeysBtn";
+            this.rsaGenerateKeysBtn.Size = new System.Drawing.Size(115, 23);
+            this.rsaGenerateKeysBtn.TabIndex = 0;
+            this.rsaGenerateKeysBtn.Text = "Generate keys";
+            this.rsaGenerateKeysBtn.UseVisualStyleBackColor = true;
+            this.rsaGenerateKeysBtn.Click += new System.EventHandler(this.rsaGenerateKeysBtn_Click);
             // 
             // envelopeTab
             // 
@@ -755,102 +778,6 @@
             this.envelopeTab.TabIndex = 3;
             this.envelopeTab.Text = "Envelope";
             this.envelopeTab.UseVisualStyleBackColor = true;
-            // 
-            // envelopeEncryptBox
-            // 
-            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptStart);
-            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPublicBtn);
-            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPlainBtn);
-            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptEnvelope);
-            this.envelopeEncryptBox.Controls.Add(this.label17);
-            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPublic);
-            this.envelopeEncryptBox.Controls.Add(this.label16);
-            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPlain);
-            this.envelopeEncryptBox.Controls.Add(this.label15);
-            this.envelopeEncryptBox.Location = new System.Drawing.Point(15, 19);
-            this.envelopeEncryptBox.Name = "envelopeEncryptBox";
-            this.envelopeEncryptBox.Size = new System.Drawing.Size(831, 148);
-            this.envelopeEncryptBox.TabIndex = 0;
-            this.envelopeEncryptBox.TabStop = false;
-            this.envelopeEncryptBox.Text = "Encrypt";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 29);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(66, 13);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Plain text file";
-            // 
-            // envelopeEncryptPlain
-            // 
-            this.envelopeEncryptPlain.Location = new System.Drawing.Point(107, 29);
-            this.envelopeEncryptPlain.Name = "envelopeEncryptPlain";
-            this.envelopeEncryptPlain.Size = new System.Drawing.Size(582, 20);
-            this.envelopeEncryptPlain.TabIndex = 1;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 13);
-            this.label16.TabIndex = 2;
-            this.label16.Text = "Public key file";
-            // 
-            // envelopeEncryptPublic
-            // 
-            this.envelopeEncryptPublic.Location = new System.Drawing.Point(107, 57);
-            this.envelopeEncryptPublic.Name = "envelopeEncryptPublic";
-            this.envelopeEncryptPublic.Size = new System.Drawing.Size(582, 20);
-            this.envelopeEncryptPublic.TabIndex = 3;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(9, 84);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 13);
-            this.label17.TabIndex = 4;
-            this.label17.Text = "Envelope file";
-            // 
-            // envelopeEncryptEnvelope
-            // 
-            this.envelopeEncryptEnvelope.Location = new System.Drawing.Point(107, 84);
-            this.envelopeEncryptEnvelope.Name = "envelopeEncryptEnvelope";
-            this.envelopeEncryptEnvelope.Size = new System.Drawing.Size(582, 20);
-            this.envelopeEncryptEnvelope.TabIndex = 5;
-            // 
-            // envelopeEncryptPlainBtn
-            // 
-            this.envelopeEncryptPlainBtn.Location = new System.Drawing.Point(714, 29);
-            this.envelopeEncryptPlainBtn.Name = "envelopeEncryptPlainBtn";
-            this.envelopeEncryptPlainBtn.Size = new System.Drawing.Size(75, 23);
-            this.envelopeEncryptPlainBtn.TabIndex = 6;
-            this.envelopeEncryptPlainBtn.Text = "Choose file";
-            this.envelopeEncryptPlainBtn.UseVisualStyleBackColor = true;
-            this.envelopeEncryptPlainBtn.Click += new System.EventHandler(this.envelopeEncryptPlainBtn_Click);
-            // 
-            // envelopeEncryptPublicBtn
-            // 
-            this.envelopeEncryptPublicBtn.Location = new System.Drawing.Point(714, 57);
-            this.envelopeEncryptPublicBtn.Name = "envelopeEncryptPublicBtn";
-            this.envelopeEncryptPublicBtn.Size = new System.Drawing.Size(75, 23);
-            this.envelopeEncryptPublicBtn.TabIndex = 7;
-            this.envelopeEncryptPublicBtn.Text = "Choose file";
-            this.envelopeEncryptPublicBtn.UseVisualStyleBackColor = true;
-            this.envelopeEncryptPublicBtn.Click += new System.EventHandler(this.envelopeEncryptPublicBtn_Click);
-            // 
-            // envelopeEncryptStart
-            // 
-            this.envelopeEncryptStart.Location = new System.Drawing.Point(402, 110);
-            this.envelopeEncryptStart.Name = "envelopeEncryptStart";
-            this.envelopeEncryptStart.Size = new System.Drawing.Size(106, 23);
-            this.envelopeEncryptStart.TabIndex = 8;
-            this.envelopeEncryptStart.Text = "Create envelope";
-            this.envelopeEncryptStart.UseVisualStyleBackColor = true;
-            this.envelopeEncryptStart.Click += new System.EventHandler(this.envelopeEncryptStart_Click);
             // 
             // envelopeDecryptBox
             // 
@@ -870,63 +797,15 @@
             this.envelopeDecryptBox.TabStop = false;
             this.envelopeDecryptBox.Text = "Decrypt";
             // 
-            // label18
+            // envelopeDecryptStartBtn
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(9, 30);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(68, 13);
-            this.label18.TabIndex = 0;
-            this.label18.Text = "Envelope file";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(9, 62);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(76, 13);
-            this.label19.TabIndex = 1;
-            this.label19.Text = "Private key file";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 95);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(66, 13);
-            this.label20.TabIndex = 2;
-            this.label20.Text = "Plain text file";
-            // 
-            // envelopeDecryptEnvelope
-            // 
-            this.envelopeDecryptEnvelope.Location = new System.Drawing.Point(107, 30);
-            this.envelopeDecryptEnvelope.Name = "envelopeDecryptEnvelope";
-            this.envelopeDecryptEnvelope.Size = new System.Drawing.Size(582, 20);
-            this.envelopeDecryptEnvelope.TabIndex = 3;
-            // 
-            // envelopeDecryptPrivate
-            // 
-            this.envelopeDecryptPrivate.Location = new System.Drawing.Point(107, 62);
-            this.envelopeDecryptPrivate.Name = "envelopeDecryptPrivate";
-            this.envelopeDecryptPrivate.Size = new System.Drawing.Size(582, 20);
-            this.envelopeDecryptPrivate.TabIndex = 4;
-            // 
-            // envelopeDecryptPlain
-            // 
-            this.envelopeDecryptPlain.Location = new System.Drawing.Point(107, 95);
-            this.envelopeDecryptPlain.Name = "envelopeDecryptPlain";
-            this.envelopeDecryptPlain.Size = new System.Drawing.Size(582, 20);
-            this.envelopeDecryptPlain.TabIndex = 5;
-            // 
-            // envelopeDecryptEnvelopeBtn
-            // 
-            this.envelopeDecryptEnvelopeBtn.Location = new System.Drawing.Point(714, 27);
-            this.envelopeDecryptEnvelopeBtn.Name = "envelopeDecryptEnvelopeBtn";
-            this.envelopeDecryptEnvelopeBtn.Size = new System.Drawing.Size(75, 23);
-            this.envelopeDecryptEnvelopeBtn.TabIndex = 6;
-            this.envelopeDecryptEnvelopeBtn.Text = "Choose file";
-            this.envelopeDecryptEnvelopeBtn.UseVisualStyleBackColor = true;
-            this.envelopeDecryptEnvelopeBtn.Click += new System.EventHandler(this.envelopeDecryptEnvelopeBtn_Click);
+            this.envelopeDecryptStartBtn.Location = new System.Drawing.Point(392, 130);
+            this.envelopeDecryptStartBtn.Name = "envelopeDecryptStartBtn";
+            this.envelopeDecryptStartBtn.Size = new System.Drawing.Size(116, 23);
+            this.envelopeDecryptStartBtn.TabIndex = 8;
+            this.envelopeDecryptStartBtn.Text = "Read envelope";
+            this.envelopeDecryptStartBtn.UseVisualStyleBackColor = true;
+            this.envelopeDecryptStartBtn.Click += new System.EventHandler(this.envelopeDecryptStartBtn_Click);
             // 
             // envelopeDecryptprivateBtn
             // 
@@ -938,15 +817,345 @@
             this.envelopeDecryptprivateBtn.UseVisualStyleBackColor = true;
             this.envelopeDecryptprivateBtn.Click += new System.EventHandler(this.envelopeDecryptprivateBtn_Click);
             // 
-            // envelopeDecryptStartBtn
+            // envelopeDecryptEnvelopeBtn
             // 
-            this.envelopeDecryptStartBtn.Location = new System.Drawing.Point(392, 130);
-            this.envelopeDecryptStartBtn.Name = "envelopeDecryptStartBtn";
-            this.envelopeDecryptStartBtn.Size = new System.Drawing.Size(116, 23);
-            this.envelopeDecryptStartBtn.TabIndex = 8;
-            this.envelopeDecryptStartBtn.Text = "Read envelope";
-            this.envelopeDecryptStartBtn.UseVisualStyleBackColor = true;
-            this.envelopeDecryptStartBtn.Click += new System.EventHandler(this.envelopeDecryptStartBtn_Click);
+            this.envelopeDecryptEnvelopeBtn.Location = new System.Drawing.Point(714, 27);
+            this.envelopeDecryptEnvelopeBtn.Name = "envelopeDecryptEnvelopeBtn";
+            this.envelopeDecryptEnvelopeBtn.Size = new System.Drawing.Size(75, 23);
+            this.envelopeDecryptEnvelopeBtn.TabIndex = 6;
+            this.envelopeDecryptEnvelopeBtn.Text = "Choose file";
+            this.envelopeDecryptEnvelopeBtn.UseVisualStyleBackColor = true;
+            this.envelopeDecryptEnvelopeBtn.Click += new System.EventHandler(this.envelopeDecryptEnvelopeBtn_Click);
+            // 
+            // envelopeDecryptPlain
+            // 
+            this.envelopeDecryptPlain.Location = new System.Drawing.Point(107, 95);
+            this.envelopeDecryptPlain.Name = "envelopeDecryptPlain";
+            this.envelopeDecryptPlain.Size = new System.Drawing.Size(582, 20);
+            this.envelopeDecryptPlain.TabIndex = 5;
+            // 
+            // envelopeDecryptPrivate
+            // 
+            this.envelopeDecryptPrivate.Location = new System.Drawing.Point(107, 62);
+            this.envelopeDecryptPrivate.Name = "envelopeDecryptPrivate";
+            this.envelopeDecryptPrivate.Size = new System.Drawing.Size(582, 20);
+            this.envelopeDecryptPrivate.TabIndex = 4;
+            // 
+            // envelopeDecryptEnvelope
+            // 
+            this.envelopeDecryptEnvelope.Location = new System.Drawing.Point(107, 30);
+            this.envelopeDecryptEnvelope.Name = "envelopeDecryptEnvelope";
+            this.envelopeDecryptEnvelope.Size = new System.Drawing.Size(582, 20);
+            this.envelopeDecryptEnvelope.TabIndex = 3;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(12, 95);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(66, 13);
+            this.label20.TabIndex = 2;
+            this.label20.Text = "Plain text file";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(9, 62);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(76, 13);
+            this.label19.TabIndex = 1;
+            this.label19.Text = "Private key file";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(9, 30);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(68, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Envelope file";
+            // 
+            // envelopeEncryptBox
+            // 
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptStart);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPublicBtn);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPlainBtn);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptEnvelope);
+            this.envelopeEncryptBox.Controls.Add(this.label17);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPublic);
+            this.envelopeEncryptBox.Controls.Add(this.label16);
+            this.envelopeEncryptBox.Controls.Add(this.envelopeEncryptPlain);
+            this.envelopeEncryptBox.Controls.Add(this.label15);
+            this.envelopeEncryptBox.Location = new System.Drawing.Point(15, 19);
+            this.envelopeEncryptBox.Name = "envelopeEncryptBox";
+            this.envelopeEncryptBox.Size = new System.Drawing.Size(831, 148);
+            this.envelopeEncryptBox.TabIndex = 0;
+            this.envelopeEncryptBox.TabStop = false;
+            this.envelopeEncryptBox.Text = "Encrypt";
+            // 
+            // envelopeEncryptStart
+            // 
+            this.envelopeEncryptStart.Location = new System.Drawing.Point(402, 110);
+            this.envelopeEncryptStart.Name = "envelopeEncryptStart";
+            this.envelopeEncryptStart.Size = new System.Drawing.Size(106, 23);
+            this.envelopeEncryptStart.TabIndex = 8;
+            this.envelopeEncryptStart.Text = "Create envelope";
+            this.envelopeEncryptStart.UseVisualStyleBackColor = true;
+            this.envelopeEncryptStart.Click += new System.EventHandler(this.envelopeEncryptStart_Click);
+            // 
+            // envelopeEncryptPublicBtn
+            // 
+            this.envelopeEncryptPublicBtn.Location = new System.Drawing.Point(714, 57);
+            this.envelopeEncryptPublicBtn.Name = "envelopeEncryptPublicBtn";
+            this.envelopeEncryptPublicBtn.Size = new System.Drawing.Size(75, 23);
+            this.envelopeEncryptPublicBtn.TabIndex = 7;
+            this.envelopeEncryptPublicBtn.Text = "Choose file";
+            this.envelopeEncryptPublicBtn.UseVisualStyleBackColor = true;
+            this.envelopeEncryptPublicBtn.Click += new System.EventHandler(this.envelopeEncryptPublicBtn_Click);
+            // 
+            // envelopeEncryptPlainBtn
+            // 
+            this.envelopeEncryptPlainBtn.Location = new System.Drawing.Point(714, 29);
+            this.envelopeEncryptPlainBtn.Name = "envelopeEncryptPlainBtn";
+            this.envelopeEncryptPlainBtn.Size = new System.Drawing.Size(75, 23);
+            this.envelopeEncryptPlainBtn.TabIndex = 6;
+            this.envelopeEncryptPlainBtn.Text = "Choose file";
+            this.envelopeEncryptPlainBtn.UseVisualStyleBackColor = true;
+            this.envelopeEncryptPlainBtn.Click += new System.EventHandler(this.envelopeEncryptPlainBtn_Click);
+            // 
+            // envelopeEncryptEnvelope
+            // 
+            this.envelopeEncryptEnvelope.Location = new System.Drawing.Point(107, 84);
+            this.envelopeEncryptEnvelope.Name = "envelopeEncryptEnvelope";
+            this.envelopeEncryptEnvelope.Size = new System.Drawing.Size(582, 20);
+            this.envelopeEncryptEnvelope.TabIndex = 5;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(9, 84);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(68, 13);
+            this.label17.TabIndex = 4;
+            this.label17.Text = "Envelope file";
+            // 
+            // envelopeEncryptPublic
+            // 
+            this.envelopeEncryptPublic.Location = new System.Drawing.Point(107, 57);
+            this.envelopeEncryptPublic.Name = "envelopeEncryptPublic";
+            this.envelopeEncryptPublic.Size = new System.Drawing.Size(582, 20);
+            this.envelopeEncryptPublic.TabIndex = 3;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 57);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 13);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Public key file";
+            // 
+            // envelopeEncryptPlain
+            // 
+            this.envelopeEncryptPlain.Location = new System.Drawing.Point(107, 29);
+            this.envelopeEncryptPlain.Name = "envelopeEncryptPlain";
+            this.envelopeEncryptPlain.Size = new System.Drawing.Size(582, 20);
+            this.envelopeEncryptPlain.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(6, 29);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(66, 13);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Plain text file";
+            // 
+            // signatureTab
+            // 
+            this.signatureTab.Controls.Add(this.signatureVerifyBox);
+            this.signatureTab.Controls.Add(this.signatureCreateBox);
+            this.signatureTab.Location = new System.Drawing.Point(4, 22);
+            this.signatureTab.Name = "signatureTab";
+            this.signatureTab.Padding = new System.Windows.Forms.Padding(3);
+            this.signatureTab.Size = new System.Drawing.Size(865, 464);
+            this.signatureTab.TabIndex = 4;
+            this.signatureTab.Text = "Signature";
+            this.signatureTab.UseVisualStyleBackColor = true;
+            // 
+            // signatureCreateBox
+            // 
+            this.signatureCreateBox.Controls.Add(this.signatureCreateSignature);
+            this.signatureCreateBox.Controls.Add(this.signatureSignPrivateBtn);
+            this.signatureCreateBox.Controls.Add(this.signatureSignPlainBtn);
+            this.signatureCreateBox.Controls.Add(this.signatureSignSignature);
+            this.signatureCreateBox.Controls.Add(this.signatureSignPrivateKey);
+            this.signatureCreateBox.Controls.Add(this.signatureSignPlain);
+            this.signatureCreateBox.Controls.Add(this.label23);
+            this.signatureCreateBox.Controls.Add(this.label22);
+            this.signatureCreateBox.Controls.Add(this.label21);
+            this.signatureCreateBox.Location = new System.Drawing.Point(19, 16);
+            this.signatureCreateBox.Name = "signatureCreateBox";
+            this.signatureCreateBox.Size = new System.Drawing.Size(840, 144);
+            this.signatureCreateBox.TabIndex = 0;
+            this.signatureCreateBox.TabStop = false;
+            this.signatureCreateBox.Text = "Sign";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(7, 20);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(66, 13);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Plain text file";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(7, 48);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(112, 13);
+            this.label22.TabIndex = 1;
+            this.label22.Text = "Sender private key file";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(7, 83);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(98, 13);
+            this.label23.TabIndex = 2;
+            this.label23.Text = "Digital signature file";
+            // 
+            // signatureSignPlain
+            // 
+            this.signatureSignPlain.Location = new System.Drawing.Point(127, 20);
+            this.signatureSignPlain.Name = "signatureSignPlain";
+            this.signatureSignPlain.Size = new System.Drawing.Size(577, 20);
+            this.signatureSignPlain.TabIndex = 3;
+            // 
+            // signatureSignPrivateKey
+            // 
+            this.signatureSignPrivateKey.Location = new System.Drawing.Point(127, 48);
+            this.signatureSignPrivateKey.Name = "signatureSignPrivateKey";
+            this.signatureSignPrivateKey.Size = new System.Drawing.Size(577, 20);
+            this.signatureSignPrivateKey.TabIndex = 4;
+            // 
+            // signatureSignSignature
+            // 
+            this.signatureSignSignature.Location = new System.Drawing.Point(127, 83);
+            this.signatureSignSignature.Name = "signatureSignSignature";
+            this.signatureSignSignature.Size = new System.Drawing.Size(577, 20);
+            this.signatureSignSignature.TabIndex = 5;
+            // 
+            // signatureSignPlainBtn
+            // 
+            this.signatureSignPlainBtn.Location = new System.Drawing.Point(723, 20);
+            this.signatureSignPlainBtn.Name = "signatureSignPlainBtn";
+            this.signatureSignPlainBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureSignPlainBtn.TabIndex = 6;
+            this.signatureSignPlainBtn.Text = "Choose file";
+            this.signatureSignPlainBtn.UseVisualStyleBackColor = true;
+            this.signatureSignPlainBtn.Click += new System.EventHandler(this.signatureSignPlainBtn_Click);
+            // 
+            // signatureSignPrivateBtn
+            // 
+            this.signatureSignPrivateBtn.Location = new System.Drawing.Point(723, 49);
+            this.signatureSignPrivateBtn.Name = "signatureSignPrivateBtn";
+            this.signatureSignPrivateBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureSignPrivateBtn.TabIndex = 7;
+            this.signatureSignPrivateBtn.Text = "Choose file";
+            this.signatureSignPrivateBtn.UseVisualStyleBackColor = true;
+            this.signatureSignPrivateBtn.Click += new System.EventHandler(this.signatureSignPrivateBtn_Click);
+            // 
+            // signatureCreateSignature
+            // 
+            this.signatureCreateSignature.Location = new System.Drawing.Point(427, 109);
+            this.signatureCreateSignature.Name = "signatureCreateSignature";
+            this.signatureCreateSignature.Size = new System.Drawing.Size(91, 23);
+            this.signatureCreateSignature.TabIndex = 8;
+            this.signatureCreateSignature.Text = "Sign message";
+            this.signatureCreateSignature.UseVisualStyleBackColor = true;
+            this.signatureCreateSignature.Click += new System.EventHandler(this.signatureCreateSignature_Click);
+            // 
+            // signatureVerifyBox
+            // 
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifyBtn);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifyPublicBtn);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifySignatureBtn);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifyPublicKey);
+            this.signatureVerifyBox.Controls.Add(this.signatureVerifySignatureFile);
+            this.signatureVerifyBox.Controls.Add(this.label25);
+            this.signatureVerifyBox.Controls.Add(this.label24);
+            this.signatureVerifyBox.Location = new System.Drawing.Point(19, 202);
+            this.signatureVerifyBox.Name = "signatureVerifyBox";
+            this.signatureVerifyBox.Size = new System.Drawing.Size(591, 121);
+            this.signatureVerifyBox.TabIndex = 1;
+            this.signatureVerifyBox.TabStop = false;
+            this.signatureVerifyBox.Text = "Verify";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(10, 20);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(68, 13);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "Signature file";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(10, 47);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(108, 13);
+            this.label25.TabIndex = 1;
+            this.label25.Text = "Sender public key file";
+            // 
+            // signatureVerifySignatureFile
+            // 
+            this.signatureVerifySignatureFile.Location = new System.Drawing.Point(127, 20);
+            this.signatureVerifySignatureFile.Name = "signatureVerifySignatureFile";
+            this.signatureVerifySignatureFile.Size = new System.Drawing.Size(343, 20);
+            this.signatureVerifySignatureFile.TabIndex = 2;
+            // 
+            // signatureVerifyPublicKey
+            // 
+            this.signatureVerifyPublicKey.Location = new System.Drawing.Point(127, 47);
+            this.signatureVerifyPublicKey.Name = "signatureVerifyPublicKey";
+            this.signatureVerifyPublicKey.Size = new System.Drawing.Size(343, 20);
+            this.signatureVerifyPublicKey.TabIndex = 3;
+            // 
+            // signatureVerifySignatureBtn
+            // 
+            this.signatureVerifySignatureBtn.Location = new System.Drawing.Point(504, 20);
+            this.signatureVerifySignatureBtn.Name = "signatureVerifySignatureBtn";
+            this.signatureVerifySignatureBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureVerifySignatureBtn.TabIndex = 4;
+            this.signatureVerifySignatureBtn.Text = "Choose file";
+            this.signatureVerifySignatureBtn.UseVisualStyleBackColor = true;
+            this.signatureVerifySignatureBtn.Click += new System.EventHandler(this.signatureVerifySignatureBtn_Click);
+            // 
+            // signatureVerifyPublicBtn
+            // 
+            this.signatureVerifyPublicBtn.Location = new System.Drawing.Point(504, 47);
+            this.signatureVerifyPublicBtn.Name = "signatureVerifyPublicBtn";
+            this.signatureVerifyPublicBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureVerifyPublicBtn.TabIndex = 5;
+            this.signatureVerifyPublicBtn.Text = "Choose file";
+            this.signatureVerifyPublicBtn.UseVisualStyleBackColor = true;
+            this.signatureVerifyPublicBtn.Click += new System.EventHandler(this.signatureVerifyPublicBtn_Click);
+            // 
+            // signatureVerifyBtn
+            // 
+            this.signatureVerifyBtn.Location = new System.Drawing.Point(277, 87);
+            this.signatureVerifyBtn.Name = "signatureVerifyBtn";
+            this.signatureVerifyBtn.Size = new System.Drawing.Size(75, 23);
+            this.signatureVerifyBtn.TabIndex = 6;
+            this.signatureVerifyBtn.Text = "Verify";
+            this.signatureVerifyBtn.UseVisualStyleBackColor = true;
+            this.signatureVerifyBtn.Click += new System.EventHandler(this.signatureVerifyBtn_Click);
             // 
             // MainWindow
             // 
@@ -966,15 +1175,20 @@
             this.sha1Tab.PerformLayout();
             this.rsaTab.ResumeLayout(false);
             this.rsaTab.PerformLayout();
-            this.rsaEncryptBox.ResumeLayout(false);
-            this.rsaEncryptBox.PerformLayout();
             this.rsaDecryptBox.ResumeLayout(false);
             this.rsaDecryptBox.PerformLayout();
+            this.rsaEncryptBox.ResumeLayout(false);
+            this.rsaEncryptBox.PerformLayout();
             this.envelopeTab.ResumeLayout(false);
-            this.envelopeEncryptBox.ResumeLayout(false);
-            this.envelopeEncryptBox.PerformLayout();
             this.envelopeDecryptBox.ResumeLayout(false);
             this.envelopeDecryptBox.PerformLayout();
+            this.envelopeEncryptBox.ResumeLayout(false);
+            this.envelopeEncryptBox.PerformLayout();
+            this.signatureTab.ResumeLayout(false);
+            this.signatureCreateBox.ResumeLayout(false);
+            this.signatureCreateBox.PerformLayout();
+            this.signatureVerifyBox.ResumeLayout(false);
+            this.signatureVerifyBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1063,6 +1277,25 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TabPage signatureTab;
+        private System.Windows.Forms.GroupBox signatureCreateBox;
+        private System.Windows.Forms.Button signatureCreateSignature;
+        private System.Windows.Forms.Button signatureSignPrivateBtn;
+        private System.Windows.Forms.Button signatureSignPlainBtn;
+        private System.Windows.Forms.TextBox signatureSignSignature;
+        private System.Windows.Forms.TextBox signatureSignPrivateKey;
+        private System.Windows.Forms.TextBox signatureSignPlain;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.GroupBox signatureVerifyBox;
+        private System.Windows.Forms.Button signatureVerifyPublicBtn;
+        private System.Windows.Forms.Button signatureVerifySignatureBtn;
+        private System.Windows.Forms.TextBox signatureVerifyPublicKey;
+        private System.Windows.Forms.TextBox signatureVerifySignatureFile;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button signatureVerifyBtn;
     }
 }
 
