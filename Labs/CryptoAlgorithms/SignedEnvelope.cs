@@ -18,17 +18,20 @@ namespace CryptoAlgorithms
             DigitalEnvelope.CreateEnvelope(plainTextFile, keySize, receiverPublicKeyFilePath,
                 tmpEnvelopeFilePath);
 
-            DigitalSignature.CreateSignature(tmpEnvelopeFilePath, keySize, senderPrivateKeyFilePath, outputFilePath);
+            DigitalSignature.CreateEnvelopeSignature(tmpEnvelopeFilePath, keySize, senderPrivateKeyFilePath, outputFilePath);
         }
 
         public static bool OpenSignedEnvelope(string signedEnvelopeFilePath, int keySize,
             string receiverPrivateKeyFilePath, string senderPublicKeyFilePath, string outputFilePath)
         {
-            var verified = DigitalSignature.VerifySignature(signedEnvelopeFilePath, keySize, senderPublicKeyFilePath);
+            var verified = DigitalSignature.VerifyEnvelopeSignature(signedEnvelopeFilePath, keySize, senderPublicKeyFilePath);
 
             var file = FileOperations.ReadFromTextFile(signedEnvelopeFilePath);
             var fileSplit = file.Split(new char[0], StringSplitOptions.RemoveEmptyEntries);
-            var envelopeHex = fileSplit[3];
+            var keyBytes = Converter.HexStringToBytes(fileSplit[4]);
+            var messageBytes = Converter.HexStringToBytes(fileSplit[6]);
+
+            DigitalEnvelope.ReadEnvelope(keyBytes, messageBytes, keySize, receiverPrivateKeyFilePath, outputFilePath);
 
             return verified;
         }

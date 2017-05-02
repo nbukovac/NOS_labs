@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using CryptoAlgorithms.Algorithms;
 using CryptoAlgorithms.Helpers;
 
@@ -43,6 +44,21 @@ namespace CryptoAlgorithms
 
             FileOperations.WriteToBinaryFile(outputFilePath, decrypted);
         }
+
+        public static void ReadEnvelope(byte[] keyBytes, byte[] messageBytes, int keySize, string privateKeyFilePath,
+            string outputFilePath)
+        {
+            var keyDecrypted = RSA.Decrypt(keyBytes, keySize, privateKeyFilePath);
+            byte[] aesKey;
+            byte[] aesIv;
+
+            GetAesParameters(keyDecrypted, out aesKey, out aesIv);
+
+            var decrypted = AES.Decrypt(aesKey, aesIv, messageBytes);
+
+            FileOperations.WriteToBinaryFile(outputFilePath, decrypted);
+        }
+
 
         private static void GetAesParameters(byte[] keyDecrypted, out byte[] key, out byte[] iv)
         {
