@@ -1025,14 +1025,14 @@
             this.signatureVerifyBox.Controls.Add(this.label24);
             this.signatureVerifyBox.Location = new System.Drawing.Point(19, 202);
             this.signatureVerifyBox.Name = "signatureVerifyBox";
-            this.signatureVerifyBox.Size = new System.Drawing.Size(591, 121);
+            this.signatureVerifyBox.Size = new System.Drawing.Size(840, 121);
             this.signatureVerifyBox.TabIndex = 1;
             this.signatureVerifyBox.TabStop = false;
             this.signatureVerifyBox.Text = "Verify";
             // 
             // signatureVerifyBtn
             // 
-            this.signatureVerifyBtn.Location = new System.Drawing.Point(277, 87);
+            this.signatureVerifyBtn.Location = new System.Drawing.Point(427, 82);
             this.signatureVerifyBtn.Name = "signatureVerifyBtn";
             this.signatureVerifyBtn.Size = new System.Drawing.Size(75, 23);
             this.signatureVerifyBtn.TabIndex = 6;
@@ -1042,7 +1042,7 @@
             // 
             // signatureVerifyPublicBtn
             // 
-            this.signatureVerifyPublicBtn.Location = new System.Drawing.Point(504, 47);
+            this.signatureVerifyPublicBtn.Location = new System.Drawing.Point(723, 47);
             this.signatureVerifyPublicBtn.Name = "signatureVerifyPublicBtn";
             this.signatureVerifyPublicBtn.Size = new System.Drawing.Size(75, 23);
             this.signatureVerifyPublicBtn.TabIndex = 5;
@@ -1052,7 +1052,7 @@
             // 
             // signatureVerifySignatureBtn
             // 
-            this.signatureVerifySignatureBtn.Location = new System.Drawing.Point(504, 20);
+            this.signatureVerifySignatureBtn.Location = new System.Drawing.Point(723, 15);
             this.signatureVerifySignatureBtn.Name = "signatureVerifySignatureBtn";
             this.signatureVerifySignatureBtn.Size = new System.Drawing.Size(75, 23);
             this.signatureVerifySignatureBtn.TabIndex = 4;
@@ -1064,14 +1064,14 @@
             // 
             this.signatureVerifyPublicKey.Location = new System.Drawing.Point(127, 47);
             this.signatureVerifyPublicKey.Name = "signatureVerifyPublicKey";
-            this.signatureVerifyPublicKey.Size = new System.Drawing.Size(343, 20);
+            this.signatureVerifyPublicKey.Size = new System.Drawing.Size(577, 20);
             this.signatureVerifyPublicKey.TabIndex = 3;
             // 
             // signatureVerifySignatureFile
             // 
             this.signatureVerifySignatureFile.Location = new System.Drawing.Point(127, 20);
             this.signatureVerifySignatureFile.Name = "signatureVerifySignatureFile";
-            this.signatureVerifySignatureFile.Size = new System.Drawing.Size(343, 20);
+            this.signatureVerifySignatureFile.Size = new System.Drawing.Size(577, 20);
             this.signatureVerifySignatureFile.TabIndex = 2;
             // 
             // label25
