@@ -523,5 +523,15 @@ namespace CryptoAlgorithms
 
         #endregion
 
+
+        #region Custom SHA-1
+
+        private void shaCustomPlainFileBtn_Click(object sender, EventArgs e)
+        {
+            shaCustomPlainFile.Text = GetFileName();
+            CustomSHA1.CalculateHash(shaCustomPlainFile.Text, "");
+        }
+
+        #endregion
     }
 }

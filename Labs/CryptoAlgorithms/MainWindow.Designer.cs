@@ -156,6 +156,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.shaCustomPlainFile = new System.Windows.Forms.TextBox();
+            this.shaCustomPlainFileBtn = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesDecryptGroup.SuspendLayout();
@@ -495,6 +497,8 @@
             // 
             // sha1Tab
             // 
+            this.sha1Tab.Controls.Add(this.shaCustomPlainFileBtn);
+            this.sha1Tab.Controls.Add(this.shaCustomPlainFile);
             this.sha1Tab.Controls.Add(this.sha1CalculateHashBtn);
             this.sha1Tab.Controls.Add(this.sha1PlainChooseBtn);
             this.sha1Tab.Controls.Add(this.sha1HashFile);
@@ -1450,6 +1454,23 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "Plain text file";
             // 
+            // shaCustomPlainFile
+            // 
+            this.shaCustomPlainFile.Location = new System.Drawing.Point(103, 209);
+            this.shaCustomPlainFile.Name = "shaCustomPlainFile";
+            this.shaCustomPlainFile.Size = new System.Drawing.Size(100, 20);
+            this.shaCustomPlainFile.TabIndex = 6;
+            // 
+            // shaCustomPlainFileBtn
+            // 
+            this.shaCustomPlainFileBtn.Location = new System.Drawing.Point(278, 209);
+            this.shaCustomPlainFileBtn.Name = "shaCustomPlainFileBtn";
+            this.shaCustomPlainFileBtn.Size = new System.Drawing.Size(75, 23);
+            this.shaCustomPlainFileBtn.TabIndex = 7;
+            this.shaCustomPlainFileBtn.Text = "Choose file";
+            this.shaCustomPlainFileBtn.UseVisualStyleBackColor = true;
+            this.shaCustomPlainFileBtn.Click += new System.EventHandler(this.shaCustomPlainFileBtn_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1621,6 +1642,8 @@
         private System.Windows.Forms.TextBox signedEnvelopeOpenEnvelope;
         private System.Windows.Forms.Button signedEnvelopeOpenSenderPublicBtn;
         private System.Windows.Forms.Button signedEnvelopeOpenBtn;
+        private System.Windows.Forms.Button shaCustomPlainFileBtn;
+        private System.Windows.Forms.TextBox shaCustomPlainFile;
     }
 }
 

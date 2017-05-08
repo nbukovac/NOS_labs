@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Algorithms\AES.cs" />
+    <Compile Include="Algorithms\CustomSHA1.cs" />
     <Compile Include="Algorithms\RSA.cs" />
     <Compile Include="Algorithms\SHA1.cs" />
     <Compile Include="DigitalEnvelope.cs" />
