@@ -7,6 +7,7 @@ namespace CryptoAlgorithms.Algorithms
     public class CustomSHA1
     {
         private const int BlockSizeBytes = 64;
+        private const int SizeBytes = 8;
         private const int ByteShift = 8;
         private const int BigArraySizeBytes = 80;
         private const int WordsInBlock = 16;
@@ -23,7 +24,7 @@ namespace CryptoAlgorithms.Algorithms
         private const uint Hash4 = 0xC3D2E1F0;
 
         // (B AND C) OR ((NOT B) AND D)
-        private static readonly Func<uint, uint, uint, uint> F1Func = (b, c, d) => (b & c) | (~b & d);
+        private static readonly Func<uint, uint, uint, uint> F1Func = (b, c, d) => (b & c) | ((~b) & d);
         // B XOR C XOR D
         private static readonly Func<uint, uint, uint, uint> F2Func = (b, c, d) => b ^ c ^ d;
         // (B AND C) OR (B AND D) OR (C AND D)
@@ -39,6 +40,8 @@ namespace CryptoAlgorithms.Algorithms
             GetHash(blocks, hash);
 
             var hashString = Converter.UIntArrayToString(hash);
+
+            FileOperations.WriteToTextFile(hashOutputFilePath, hashString);
         }
 
         private static void GetHash(IEnumerable<uint[]> blocks, uint[] hash)
@@ -153,29 +156,26 @@ namespace CryptoAlgorithms.Algorithms
         private static byte[] PadInputBytes(string filePath)
         {
             var inputBytes = FileOperations.ReadFromBinaryFile(filePath);
-            var bytesToPad = Convert.ToUInt32((BlockSizeBytes - inputBytes.Length%BlockSizeBytes)%BlockSizeBytes);
+            var bytesToPad = Convert.ToUInt32(BlockSizeBytes - inputBytes.Length%BlockSizeBytes);
             var paddedInput = new byte[inputBytes.Length + bytesToPad];
 
-            if (bytesToPad == 0)
+            for (int i = 0; i < inputBytes.Length; i++)
             {
-                Array.Copy(inputBytes, paddedInput, inputBytes.Length);
+                paddedInput[i] = inputBytes[i];
             }
-            else
+
+            paddedInput[inputBytes.Length] = 0x80;
+
+            for (int i = 1; i < bytesToPad - 8; i++)
             {
-                for (var i = 0; i < inputBytes.Length; i++)
-                {
-                    paddedInput[i] = inputBytes[i];
-                }
+                paddedInput[inputBytes.Length + i] = 0;
+            }
 
-                paddedInput[inputBytes.Length] = 0x80;
+            var converted = BitConverter.GetBytes((long)inputBytes.Length * SizeBytes);
 
-                for (var i = 1; i < bytesToPad - 2; i++)
-                {
-                    paddedInput[inputBytes.Length + i] = 0;
-                }
-
-                paddedInput[inputBytes.Length - 2] = GetByte((BlockSizeBytes - bytesToPad)*8, 1);
-                paddedInput[inputBytes.Length - 1] = GetByte((BlockSizeBytes - bytesToPad)*8, 0);
+            for (int i = converted.Length - 1; i >= 0; i--)
+            {
+                paddedInput[paddedInput.Length - i - 1] = converted[i];
             }
 
             return paddedInput;
