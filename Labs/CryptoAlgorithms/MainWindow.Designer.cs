@@ -59,6 +59,8 @@
             this.aesIVLabel = new System.Windows.Forms.Label();
             this.aesKeyLabel = new System.Windows.Forms.Label();
             this.sha1Tab = new System.Windows.Forms.TabPage();
+            this.shaCustomPlainFileBtn = new System.Windows.Forms.Button();
+            this.shaCustomPlainFile = new System.Windows.Forms.TextBox();
             this.sha1CalculateHashBtn = new System.Windows.Forms.Button();
             this.sha1PlainChooseBtn = new System.Windows.Forms.Button();
             this.sha1HashFile = new System.Windows.Forms.TextBox();
@@ -156,8 +158,11 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.shaCustomPlainFile = new System.Windows.Forms.TextBox();
-            this.shaCustomPlainFileBtn = new System.Windows.Forms.Button();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.shaCustomHashFile = new System.Windows.Forms.TextBox();
+            this.shaCustomCalculateBtn = new System.Windows.Forms.Button();
+            this.shaCompareBtn = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.aesTab.SuspendLayout();
             this.aesDecryptGroup.SuspendLayout();
@@ -497,6 +502,11 @@
             // 
             // sha1Tab
             // 
+            this.sha1Tab.Controls.Add(this.shaCompareBtn);
+            this.sha1Tab.Controls.Add(this.shaCustomCalculateBtn);
+            this.sha1Tab.Controls.Add(this.shaCustomHashFile);
+            this.sha1Tab.Controls.Add(this.label35);
+            this.sha1Tab.Controls.Add(this.label34);
             this.sha1Tab.Controls.Add(this.shaCustomPlainFileBtn);
             this.sha1Tab.Controls.Add(this.shaCustomPlainFile);
             this.sha1Tab.Controls.Add(this.sha1CalculateHashBtn);
@@ -512,6 +522,23 @@
             this.sha1Tab.TabIndex = 1;
             this.sha1Tab.Text = "SHA-1";
             this.sha1Tab.UseVisualStyleBackColor = true;
+            // 
+            // shaCustomPlainFileBtn
+            // 
+            this.shaCustomPlainFileBtn.Location = new System.Drawing.Point(625, 206);
+            this.shaCustomPlainFileBtn.Name = "shaCustomPlainFileBtn";
+            this.shaCustomPlainFileBtn.Size = new System.Drawing.Size(75, 23);
+            this.shaCustomPlainFileBtn.TabIndex = 7;
+            this.shaCustomPlainFileBtn.Text = "Choose file";
+            this.shaCustomPlainFileBtn.UseVisualStyleBackColor = true;
+            this.shaCustomPlainFileBtn.Click += new System.EventHandler(this.shaCustomPlainFileBtn_Click);
+            // 
+            // shaCustomPlainFile
+            // 
+            this.shaCustomPlainFile.Location = new System.Drawing.Point(103, 209);
+            this.shaCustomPlainFile.Name = "shaCustomPlainFile";
+            this.shaCustomPlainFile.Size = new System.Drawing.Size(493, 20);
+            this.shaCustomPlainFile.TabIndex = 6;
             // 
             // sha1CalculateHashBtn
             // 
@@ -1454,22 +1481,50 @@
             this.label26.TabIndex = 0;
             this.label26.Text = "Plain text file";
             // 
-            // shaCustomPlainFile
+            // label34
             // 
-            this.shaCustomPlainFile.Location = new System.Drawing.Point(103, 209);
-            this.shaCustomPlainFile.Name = "shaCustomPlainFile";
-            this.shaCustomPlainFile.Size = new System.Drawing.Size(100, 20);
-            this.shaCustomPlainFile.TabIndex = 6;
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(17, 216);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(66, 13);
+            this.label34.TabIndex = 8;
+            this.label34.Text = "Plain text file";
             // 
-            // shaCustomPlainFileBtn
+            // label35
             // 
-            this.shaCustomPlainFileBtn.Location = new System.Drawing.Point(278, 209);
-            this.shaCustomPlainFileBtn.Name = "shaCustomPlainFileBtn";
-            this.shaCustomPlainFileBtn.Size = new System.Drawing.Size(75, 23);
-            this.shaCustomPlainFileBtn.TabIndex = 7;
-            this.shaCustomPlainFileBtn.Text = "Choose file";
-            this.shaCustomPlainFileBtn.UseVisualStyleBackColor = true;
-            this.shaCustomPlainFileBtn.Click += new System.EventHandler(this.shaCustomPlainFileBtn_Click);
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(20, 246);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(81, 13);
+            this.label35.TabIndex = 9;
+            this.label35.Text = "Hash output file";
+            // 
+            // shaCustomHashFile
+            // 
+            this.shaCustomHashFile.Location = new System.Drawing.Point(103, 246);
+            this.shaCustomHashFile.Name = "shaCustomHashFile";
+            this.shaCustomHashFile.Size = new System.Drawing.Size(493, 20);
+            this.shaCustomHashFile.TabIndex = 10;
+            // 
+            // shaCustomCalculateBtn
+            // 
+            this.shaCustomCalculateBtn.Location = new System.Drawing.Point(278, 289);
+            this.shaCustomCalculateBtn.Name = "shaCustomCalculateBtn";
+            this.shaCustomCalculateBtn.Size = new System.Drawing.Size(142, 31);
+            this.shaCustomCalculateBtn.TabIndex = 11;
+            this.shaCustomCalculateBtn.Text = "Calculate hash";
+            this.shaCustomCalculateBtn.UseVisualStyleBackColor = true;
+            this.shaCustomCalculateBtn.Click += new System.EventHandler(this.shaCustomCalculateBtn_Click);
+            // 
+            // shaCompareBtn
+            // 
+            this.shaCompareBtn.Location = new System.Drawing.Point(278, 346);
+            this.shaCompareBtn.Name = "shaCompareBtn";
+            this.shaCompareBtn.Size = new System.Drawing.Size(142, 33);
+            this.shaCompareBtn.TabIndex = 12;
+            this.shaCompareBtn.Text = "Compare algorithms";
+            this.shaCompareBtn.UseVisualStyleBackColor = true;
+            this.shaCompareBtn.Click += new System.EventHandler(this.shaCompareBtn_Click);
             // 
             // MainWindow
             // 
@@ -1644,6 +1699,11 @@
         private System.Windows.Forms.Button signedEnvelopeOpenBtn;
         private System.Windows.Forms.Button shaCustomPlainFileBtn;
         private System.Windows.Forms.TextBox shaCustomPlainFile;
+        private System.Windows.Forms.Button shaCustomCalculateBtn;
+        private System.Windows.Forms.TextBox shaCustomHashFile;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Button shaCompareBtn;
     }
 }
 

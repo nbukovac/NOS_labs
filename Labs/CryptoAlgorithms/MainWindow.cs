@@ -154,12 +154,24 @@ namespace CryptoAlgorithms
 
         private void sha1CalculateHashBtn_Click(object sender, EventArgs e)
         {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(sha1PlainFile.Text))
+            {
+                MessageBox.Show("Choose a file for encryption", "Choose plain text", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+
             if (string.IsNullOrWhiteSpace(sha1HashFile.Text))
             {
                 sha1HashFile.Text = _initialDirectory + "SHA_hash.txt";
             }
 
-            SHA1.CalculateHash(sha1PlainFile.Text, sha1HashFile.Text);
+            if (ready)
+            {
+                SHA1.CalculateHash(sha1PlainFile.Text, sha1HashFile.Text); 
+            }
         }
 
         #endregion
@@ -529,9 +541,50 @@ namespace CryptoAlgorithms
         private void shaCustomPlainFileBtn_Click(object sender, EventArgs e)
         {
             shaCustomPlainFile.Text = GetFileName();
-            CustomSHA1.CalculateHash(shaCustomPlainFile.Text, "");
+        }
+
+        private void shaCustomCalculateBtn_Click(object sender, EventArgs e)
+        {
+            var ready = true;
+
+            if (string.IsNullOrWhiteSpace(shaCustomPlainFile.Text))
+            {
+                MessageBox.Show("Choose a file for encryption", "Choose plain text", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+                ready = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(shaCustomHashFile.Text))
+            {
+                shaCustomHashFile.Text = _initialDirectory + "custom_hash.txt";
+            }
+
+            if (ready)
+            {
+                CustomSHA1.CalculateHash(shaCustomPlainFile.Text, shaCustomHashFile.Text);
+            }
+        }
+
+        private void shaCompareBtn_Click(object sender, EventArgs e)
+        {
+            sha1CalculateHashBtn_Click(sender, e);
+            shaCustomCalculateBtn_Click(sender, e);
+
+            var original = FileOperations.ReadFromTextFile(sha1HashFile.Text);
+            var custom = FileOperations.ReadFromTextFile(shaCustomHashFile.Text);
+
+            if (original == custom)
+            {
+                MessageBox.Show("Hashes are the same", "Same hashes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Hashes are not the same", "Different hashes", MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
         }
 
         #endregion
+
     }
 }
